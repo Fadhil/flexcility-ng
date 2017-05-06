@@ -41,15 +41,15 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'pages',
+    path: 'accounts',
     component: SimpleLayoutComponent,
     data: {
-      title: 'Pages'
+      title: 'Accounts'
     },
     children: [
       {
         path: '',
-        loadChildren: './pages/pages.module#PagesModule',
+        loadChildren: './accounts/accounts.module#AccountsModule',
       }
     ]
   }
