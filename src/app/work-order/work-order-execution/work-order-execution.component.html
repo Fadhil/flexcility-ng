@@ -89,7 +89,7 @@
 
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-sm btn-primary pull-right">Close Work Order</button>
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders/report']">Close Work Order</button>
         </div>
       </div>
     </div><!--/.col-->
@@ -229,28 +229,17 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_type"><strong>Assign To:</strong></label>
-            <div class="col-md-9">
-              <select id="job_type" name="job_type" class="form-control">
+            <label class="col-md-4 form-control-label" for="job_type"><strong>Assigned To:</strong></label>
+            <div class="col-md-8">
 
-                <option value="0">Please select</option>
-                <optgroup label="Staff">
-                  <option value="1">En. Rodham Abu Bakar</option>
-                  <option value="2">En. Fairul Murad</option>
-                  <option value="3">Pn. Maizatul Faris</option>
-                  <option value="4">Ck. Syazlina Bakar</option>
-                  <option value="5">Hj. Ismail Ahmad</option>
-                </optgroup>
-                <optgroup label="-----------">
-                  <option value="6">Contractor</option>
-                </optgroup>
-              </select>
+
+                Pn. Maizatul Faris
             </div>
           </div>
           <div class="row">
-            <label class="col-md-3 form-control-label" for="job_type"><strong>Estimated Hours:</strong></label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" id="est_hours" placeholder="Enter estimated hours">
+            <label class="col-md-4 form-control-label" for="job_type"><strong>Estimated Hours:</strong></label>
+            <div class="col-md-8">
+              2 Hrs
             </div>
           </div><!--/.row-->
         </div>
