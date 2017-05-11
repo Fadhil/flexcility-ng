@@ -121,13 +121,13 @@
           <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
               <label class="btn btn-outline-secondary">
-                <input type="radio" name="options" id="option1"> Day
+                <input type="radio" name="options" id="option1"(click)="updatePpmDataDay()"> Day
               </label>
-              <label class="btn btn-outline-secondary active">
-                <input type="radio" name="options" id="option2" checked> Month
+              <label class="btn btn-outline-secondary ">
+                <input type="radio" name="options" id="option2" (click)="updatePpmDataMonth()"> Month
               </label>
               <label class="btn btn-outline-secondary">
-                <input type="radio" name="options" id="option3"> Year
+                <input type="radio" name="options" id="option3"(click)="updatePpmDataYear()"> Year
               </label>
             </div>
           </div>
@@ -148,7 +148,7 @@
       <ul>
         <li>
           <div class="text-muted">Total PPM WO</div>
-          <strong>733 (93% Completed)</strong>
+          <strong>{{barChartTotals[0]}}({{barChartPercentage}}% Completed)</strong>
           <div class="progress progress-xs mt-2">
             <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="688" aria-valuemin="0" aria-valuemax="733"></div>
           </div>
@@ -273,13 +273,13 @@
           <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
               <label class="btn btn-outline-secondary">
-                <input type="radio" name="options" id="option1"> Day
-              </label>
-              <label class="btn btn-outline-secondary active">
-                <input type="radio" name="options" id="option2" checked> Month
+                <input type="radio" name="options" id="option1" (click)="updateCmDataDay()"> Day
               </label>
               <label class="btn btn-outline-secondary">
-                <input type="radio" name="options" id="option3"> Year
+                <input type="radio" name="options" id="option2" (click)="updateCmDataMonth()"> Month
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3" (click)="updateCmDataYear()"> Year
               </label>
             </div>
           </div>
@@ -299,10 +299,10 @@
     <div class="card-footer">
       <ul>
         <li>
-          <div class="text-muted">Total SCM WO</div>
-          <strong>113 (72% Completed)</strong>
+          <div class="text-muted">Total CM WO</div>
+          <strong>{{cmBarChartTotals[0]}}({{cmBarChartPercentage}}% Completed)</strong>
           <div class="progress progress-xs mt-2">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 72%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-striped bg-success" role="progressbar" style="width: 72%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </li>
         <!--<li class="hidden-sm-down">-->
