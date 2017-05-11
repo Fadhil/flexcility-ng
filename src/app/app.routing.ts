@@ -31,6 +31,10 @@ export const routes: Routes = [
         loadChildren: './work-request/work-request.module#WorkRequestModule'
       },
       {
+        path: 'work-orders',
+        loadChildren: './work-order/work-order.module#WorkOrderModule'
+      },
+      {
         path: 'components',
         loadChildren: './components/components.module#ComponentsModule'
       },
