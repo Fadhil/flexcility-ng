@@ -6,6 +6,7 @@ import { Routes,
   RouterModule } from '@angular/router';
 
 import { WorkRequestComponent } from './work-request.component';
+import { WorkRequestVerificationComponent } from './work-request-verification/work-request-verification.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,13 @@ const routes: Routes = [
     component: WorkRequestComponent,
     data: {
       title: 'Work Request'
+    }
+  },
+  {
+    path: 'verification',
+    component: WorkRequestVerificationComponent,
+    data: {
+      title: 'Work Request Verification'
     }
   }
 ];
