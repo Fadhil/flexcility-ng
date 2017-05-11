@@ -42,6 +42,22 @@ export class DashboardComponent implements OnInit {
     console.log(e);
   }
 
+  // Doughnut
+  public doughnutChartLabels: string[] = ['Not completed', 'Completed'];
+  public doughnutChartData: number[] = [45, 688];
+  public doughnutChartType = 'doughnut';
+
+  public ppmDoughnutChartLabels: string[] = ['Not completed', 'Completed'];
+  public ppmDoughnutChartData: number[] = [45, 688];
+  public ppmDoughnutChartType = 'doughnut';
+
+  public scmDoughnutChartLabels: string[] = ['Not completed', 'Completed'];
+  public scmDoughnutChartData: number[] = [8, 18];
+  public scmDoughnutChartType = 'doughnut';
+
+  public cmDoughnutChartLabels: string[] = ['Not completed', 'Completed'];
+  public cmDoughnutChartData: number[] = [25, 300];
+  public cmDoughnutChartType = 'doughnut';
   // lineChart1
   public lineChart1Data: Array<any> = [
     {
@@ -49,149 +65,83 @@ export class DashboardComponent implements OnInit {
       label: 'Series A'
     }
   ];
-  public lineChart1Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  public lineChart1Options: any = {
-    maintainAspectRatio: false,
-    scales: {
-      xAxes: [{
-        gridLines: {
-          color: 'transparent',
-          zeroLineColor: 'transparent'
-        },
-        ticks: {
-          fontSize: 2,
-          fontColor: 'transparent',
-        }
 
-      }],
-      yAxes: [{
-        display: false,
-        ticks: {
-          display: false,
-          min: 40 - 5,
-          max: 84 + 5,
-        }
-      }],
-    },
-    elements: {
-      line: {
-        borderWidth: 1
-      },
-      point: {
-        radius: 4,
-        hitRadius: 10,
-        hoverRadius: 4,
-      },
-    },
-    legend: {
-      display: false
-    }
+  // barChart
+  public barChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
   };
-  public lineChart1Colours: Array<any> = [
-    { // grey
-      backgroundColor: this.brandPrimary,
-      borderColor: 'rgba(255,255,255,.55)'
-    }
-  ];
-  public lineChart1Legend = false;
-  public lineChart1Type = 'line';
+  public barChartLabels: string[] = ['Mechanical', 'Electrical', 'Civil', 'HSK', 'G & Landscape', 'Pest Control', 'Security'];
+  public barChartType = 'horizontalBar';
+  public barChartLegend = true;
 
-  // lineChart2
-  public lineChart2Data: Array<any> = [
-    {
-      data: [1, 18, 9, 17, 34, 22, 11],
-      label: 'Series A'
-    }
+  public barChartData: any[] = [
+    {data: [12, 12, 5, 9, 7, 0, 0], label: 'Not Completed'},
+    {data: [89, 121, 93, 29, 236, 0, 120], label: 'Completed'}
   ];
-  public lineChart2Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  public lineChart2Options: any = {
-    maintainAspectRatio: false,
-    scales: {
-      xAxes: [{
-        gridLines: {
-          color: 'transparent',
-          zeroLineColor: 'transparent'
-        },
-        ticks: {
-          fontSize: 2,
-          fontColor: 'transparent',
-        }
 
-      }],
-      yAxes: [{
-        display: false,
-        ticks: {
-          display: false,
-          min: 1 - 5,
-          max: 34 + 5,
-        }
-      }],
-    },
-    elements: {
-      line: {
-        tension: 0.00001,
-        borderWidth: 1
-      },
-      point: {
-        radius: 4,
-        hitRadius: 10,
-        hoverRadius: 4,
-      },
-    },
-    legend: {
-      display: false
-    }
+  // scmBarChart
+  public scmBarChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
   };
-  public lineChart2Colours: Array<any> = [
-    { // grey
-      backgroundColor: this.brandInfo,
-      borderColor: 'rgba(255,255,255,.55)'
-    }
+  public scmBarChartLabels: string[] = ['Mechanical', 'Electrical', 'Civil', 'HSK', 'G & Landscape', 'Pest Control', 'Security'];
+  public scmBarChartType = 'horizontalBar';
+  public scmBarChartLegend = true;
+  public scmBarChartTotals = [26, 18];
+  public scmBarChartPercentage = 59;
+  public scmBarChartData: any[] = [
+    {data: [0, 1, 4, 2, 1, 0, 0], label: 'Not Completed'},
+    {data: [2, 14, 2, 0, 0, 0, 0], label: 'Completed'}
   ];
-  public lineChart2Legend = false;
-  public lineChart2Type = 'line';
 
+  public updateScmDataDay(){
+    this.scmBarChartData =   [
+      {data: [1, 0, 4, 1, 6, 1, 0], label: 'Not Completed'},
+      {data: [2, 5, 10, 3, 12, 3, 1], label: 'Completed'}
+    ];
 
-  // lineChart3
-  public lineChart3Data: Array<any> = [
-    {
-      data: [78, 81, 80, 45, 34, 12, 40],
-      label: 'Series A'
-    }
-  ];
-  public lineChart3Labels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  public lineChart3Options: any = {
-    maintainAspectRatio: false,
-    scales: {
-      xAxes: [{
-        display: false
-      }],
-      yAxes: [{
-        display: false
-      }]
-    },
-    elements: {
-      line: {
-        borderWidth: 2
-      },
-      point: {
-        radius: 0,
-        hitRadius: 10,
-        hoverRadius: 4,
-      },
-    },
-    legend: {
-      display: false
-    }
+    this.scmBarChartTotals = [13, 9];
+    this.scmBarChartPercentage = 68;
+
   };
-  public lineChart3Colours: Array<any> = [
-    {
-      backgroundColor: 'rgba(255,255,255,.2)',
-      borderColor: 'rgba(255,255,255,.55)',
-    }
+
+  public updateScmDataMonth(){
+    this.scmBarChartData =   [
+      {data: [7, 0, 8, 2, 12, 2, 0], label: 'Not Completed'},
+      {data: [13, 9, 15, 5, 24, 8, 8], label: 'Completed'}
+    ];
+
+    this.scmBarChartTotals = [26,18];
+    this.scmBarChartPercentage = 59;
+
+  };
+
+  public updateScmDataYear(){
+    this.scmBarChartData =   [
+      {data: [19, 8, 14, 21, 9, 12, 9], label: 'Not Completed'},
+      {data: [40, 25, 50, 53, 32, 39, 11], label: 'Completed'}
+    ];
+
+    this.scmBarChartTotals = [121,30];
+    this.scmBarChartPercentage = 80;
+
+  };
+
+  // cmBarChart
+  public cmBarChartOptions: any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public cmBarChartLabels: string[] = ['Mechanical', 'Electrical', 'Civil', 'HSK', 'G & Landscape', 'Pest Control', 'Security'];
+  public cmBarChartType = 'horizontalBar';
+  public cmBarChartLegend = true;
+
+  public cmBarChartData: any[] = [
+    {data: [7, 0, 8, 2, 12, 2, 0], label: 'Not Completed'},
+    {data: [13, 9, 15, 5, 24, 8, 8], label: 'Completed'}
   ];
-  public lineChart3Legend = false;
-  public lineChart3Type = 'line';
+
 
 
   // barChart1

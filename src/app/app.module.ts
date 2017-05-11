@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 import { AlertComponent } from './shared/alert/alert.component';
+import { ImageUploadModule } from 'angular2-image-upload';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { AlertComponent } from './shared/alert/alert.component';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    ImageUploadModule.forRoot()
   ],
   declarations: [
     AppComponent,

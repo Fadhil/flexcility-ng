@@ -1,121 +1,120 @@
 <div class="animated fadeIn">
   <div class="row">
+    <div class="col-xs-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Bangunan Mahkamah Persekutuan Kuala Lumpur</h4>
+          Person In-Charge: Ir. Khairul Anwar
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-6 col-lg-3">
-      <div class="card card-inverse card-primary">
-        <div class="card-block pb-0">
-          <div class="btn-group float-right" dropdown>
-            <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
-              <i class="icon-settings"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+      <div class="card">
+        <div class="card-header">
+          Planned Preventive Maintenance
+          <!--<div class="card-actions">-->
+            <!--<a href="http://www.chartjs.org">-->
+              <!--<small class="text-muted">docs</small>-->
+            <!--</a>-->
+          <!--</div>-->
+        </div>
+        <div class="card-block">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+                    [data]="ppmDoughnutChartData"
+                    [labels]="ppmDoughnutChartLabels"
+                    [chartType]="ppmDoughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
           </div>
-          <h4 class="mb-0">9.823</h4>
-          <p>Members online</p>
         </div>
-        <div class="chart-wrapper px-3" style="height:70px;">
-          <canvas baseChart class="chart"
-          [datasets]="lineChart1Data"
-          [labels]="lineChart1Labels"
-          [options]="lineChart1Options"
-          [colors]="lineChart1Colours"
-          [legend]="lineChart1Legend"
-          [chartType]="lineChart1Type"
-          (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)"></canvas>
+        <div class="text-center">
+          <h6>Total: 733</h6>
         </div>
+
       </div>
-    </div><!--/.col-->
+    </div>
     <div class="col-sm-6 col-lg-3">
-      <div class="card card-inverse card-info">
-        <div class="card-block pb-0">
-          <button type="button" class="btn btn-transparent p-0 float-right">
-            <i class="icon-location-pin"></i>
-          </button>
-          <h4 class="mb-0">9.823</h4>
-          <p>Members online</p>
+      <div class="card">
+        <div class="card-header">
+          Service Contract Maintenance
+          <!--<div class="card-actions">-->
+          <!--<a href="http://www.chartjs.org">-->
+          <!--<small class="text-muted">docs</small>-->
+          <!--</a>-->
+          <!--</div>-->
         </div>
-        <div class="chart-wrapper px-3" style="height:70px;">
-          <canvas baseChart class="chart"
-          [datasets]="lineChart2Data"
-          [labels]="lineChart2Labels"
-          [options]="lineChart2Options"
-          [colors]="lineChart2Colours"
-          [legend]="lineChart2Legend"
-          [chartType]="lineChart2Type"
-          (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)"></canvas>
-        </div>
-      </div>
-    </div><!--/.col-->
-    <div class="col-sm-6 col-lg-3">
-      <div class="card card-inverse card-warning">
-        <div class="card-block pb-0">
-          <div class="btn-group float-right">
-            <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="icon-settings"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+        <div class="card-block">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+                    [data]="scmDoughnutChartData"
+                    [labels]="scmDoughnutChartLabels"
+                    [chartType]="scmDoughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
           </div>
-          <h4 class="mb-0">9.823</h4>
-          <p>Members online</p>
         </div>
-        <div class="chart-wrapper" style="height:70px;">
-          <canvas baseChart class="chart"
-          [datasets]="lineChart3Data"
-          [labels]="lineChart3Labels"
-          [options]="lineChart3Options"
-          [colors]="lineChart3Colours"
-          [legend]="lineChart3Legend"
-          [chartType]="lineChart3Type"
-          (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)"></canvas>
+        <div class="text-center">
+          <h6>Total: 26</h6>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
     <div class="col-sm-6 col-lg-3">
-      <div class="card card-inverse card-danger">
-        <div class="card-block pb-0">
-          <div class="btn-group float-right" dropdown>
-            <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
-              <i class="icon-settings"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-          <h4 class="mb-0">9.823</h4>
-          <p>Members online</p>
+      <div class="card">
+        <div class="card-header">
+          Corrective Maintenance<br/><br/>
+          <!--<div class="card-actions">-->
+          <!--<a href="http://www.chartjs.org">-->
+          <!--<small class="text-muted">docs</small>-->
+          <!--</a>-->
+          <!--</div>-->
         </div>
-        <div class="chart-wrapper px-3" style="height:70px;">
-          <canvas baseChart class="chart"
-          [datasets]="barChart1Data"
-          [labels]="barChart1Labels"
-          [options]="barChart1Options"
-          [colors]="barChart1Colours"
-          [legend]="barChart1Legend"
-          [chartType]="barChart1Type"
-          (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)"></canvas>
+        <div class="card-block">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+                    [data]="cmDoughnutChartData"
+                    [labels]="cmDoughnutChartLabels"
+                    [chartType]="cmDoughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        <div class="text-center">
+          <h6>Total: 325</h6>
         </div>
       </div>
-    </div><!--/.col-->
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card">
+        <div class="card-header">
+          Events<br/><br/>
+          <!--<div class="card-actions">-->
+          <!--<a href="http://www.chartjs.org">-->
+          <!--<small class="text-muted">docs</small>-->
+          <!--</a>-->
+          <!--</div>-->
+        </div>
+        <div class="card-block  event-card text-center">
+          <span><h1 class="event-display">12</h1>Events</span>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div><!--/.row-->
+
   <div class="card">
     <div class="card-block">
       <div class="row">
         <div class="col-sm-5">
-          <h4 class="card-title mb-0">Traffic</h4>
-          <div class="small text-muted">November 2015</div>
+          <h5 class="card-title mb-0">PPM Work Order Status</h5>
+          <div class="small text-muted">April 3rd - April 12th 2017</div>
         </div><!--/.col-->
         <div class="col-sm-7 hidden-sm-down">
           <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
@@ -134,59 +133,210 @@
           </div>
         </div><!--/.col-->
       </div><!--/.row-->
-      <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+      <div class="chart-wrapper">
         <canvas baseChart class="chart"
-        [datasets]="mainChartData"
-        [labels]="mainChartLabels"
-        [options]="mainChartOptions"
-        [colors]="mainChartColours"
-        [legend]="mainChartLegend"
-        [chartType]="mainChartType"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)"></canvas>
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
       </div>
     </div>
     <div class="card-footer">
       <ul>
         <li>
-          <div class="text-muted">Visits</div>
-          <strong>29.703 Users (40%)</strong>
+          <div class="text-muted">Total PPM WO</div>
+          <strong>733 (93% Completed)</strong>
           <div class="progress progress-xs mt-2">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="688" aria-valuemin="0" aria-valuemax="733"></div>
           </div>
         </li>
-        <li class="hidden-sm-down">
-          <div class="text-muted">Unique</div>
-          <strong>24.093 Users (20%)</strong>
-          <div class="progress progress-xs mt-2">
-            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        <!--<li class="hidden-sm-down">-->
+          <!--<div class="text-muted">Unique</div>-->
+          <!--<strong>24.093 Users (20%)</strong>-->
+          <!--<div class="progress progress-xs mt-2">-->
+            <!--<div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>-->
+          <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<div class="text-muted">Pageviews</div>-->
+          <!--<strong>78.706 Views (60%)</strong>-->
+          <!--<div class="progress progress-xs mt-2">-- >
+            <!--<div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>-->
+          <!--</div>-->
+        <!--</li>-->
+        <!--<li class="hidden-sm-down">-->
+          <!--<div class="text-muted">New Users</div>-->
+          <!--<strong>22.123 Users (80%)</strong>-->
+          <!--<div class="progress progress-xs mt-2">-->
+            <!--<div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>-->
+          <!--</div>-->
+        <!--</li>-->
+        <!--<li class="hidden-sm-down">-->
+          <!--<div class="text-muted">Bounce Rate</div>-->
+          <!--<strong>40.15%</strong>-->
+          <!--<div class="progress progress-xs mt-2">-->
+            <!--<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>-->
+          <!--</div>-->
+        <!--</li>-->
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="card-title mb-0">SCM Work Order Status</h5>
+          <div class="small text-muted">April 3rd - April 12th 2017</div>
+        </div><!--/.col-->
+        <div class="col-sm-7 hidden-sm-down">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+          <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option1" (click)="updateScmDataDay()"> Day
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option2" (click)="updateScmDataMonth()"> Month
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3" (click)="updateScmDataYear()" > Year
+              </label>
+            </div>
           </div>
-        </li>
+        </div><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper">
+        <canvas baseChart class="chart"
+                [datasets]="scmBarChartData"
+                [labels]="scmBarChartLabels"
+                [options]="scmBarChartOptions"
+                [legend]="scmBarChartLegend"
+                [chartType]="scmBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="card-footer">
+      <ul>
         <li>
-          <div class="text-muted">Pageviews</div>
-          <strong>78.706 Views (60%)</strong>
+          <div class="text-muted">Total SCM WO</div>
+          <strong>{{scmBarChartTotals[0]}}({{scmBarChartPercentage}}% Completed)</strong>
           <div class="progress progress-xs mt-2">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </li>
-        <li class="hidden-sm-down">
-          <div class="text-muted">New Users</div>
-          <strong>22.123 Users (80%)</strong>
-          <div class="progress progress-xs mt-2">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </li>
-        <li class="hidden-sm-down">
-          <div class="text-muted">Bounce Rate</div>
-          <strong>40.15%</strong>
-          <div class="progress progress-xs mt-2">
-            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </li>
+        <!--<li class="hidden-sm-down">-->
+        <!--<div class="text-muted">Unique</div>-->
+        <!--<strong>24.093 Users (20%)</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div class="text-muted">Pageviews</div>-->
+        <!--<strong>78.706 Views (60%)</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="hidden-sm-down">-->
+        <!--<div class="text-muted">New Users</div>-->
+        <!--<strong>22.123 Users (80%)</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="hidden-sm-down">-->
+        <!--<div class="text-muted">Bounce Rate</div>-->
+        <!--<strong>40.15%</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
       </ul>
     </div>
   </div>
   <!--/.card-->
+
+  <div class="card">
+    <div class="card-block">
+      <div class="row">
+        <div class="col-sm-5">
+          <h5 class="card-title mb-0">CM Work Order Status</h5>
+          <div class="small text-muted">April 3rd - April 12th 2017</div>
+        </div><!--/.col-->
+        <div class="col-sm-7 hidden-sm-down">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+          <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-3" data-toggle="buttons" aria-label="First group">
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option1"> Day
+              </label>
+              <label class="btn btn-outline-secondary active">
+                <input type="radio" name="options" id="option2" checked> Month
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3"> Year
+              </label>
+            </div>
+          </div>
+        </div><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper">
+        <canvas baseChart class="chart"
+                [datasets]="cmBarChartData"
+                [labels]="cmBarChartLabels"
+                [options]="cmBarChartOptions"
+                [legend]="cmBarChartLegend"
+                [chartType]="cmBarChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="card-footer">
+      <ul>
+        <li>
+          <div class="text-muted">Total SCM WO</div>
+          <strong>113 (72% Completed)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 72%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </li>
+        <!--<li class="hidden-sm-down">-->
+        <!--<div class="text-muted">Unique</div>-->
+        <!--<strong>24.093 Users (20%)</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div class="text-muted">Pageviews</div>-->
+        <!--<strong>78.706 Views (60%)</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="hidden-sm-down">-->
+        <!--<div class="text-muted">New Users</div>-->
+        <!--<strong>22.123 Users (80%)</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="hidden-sm-down">-->
+        <!--<div class="text-muted">Bounce Rate</div>-->
+        <!--<strong>40.15%</strong>-->
+        <!--<div class="progress progress-xs mt-2">-->
+        <!--<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>-->
+        <!--</div>-->
+        <!--</li>-->
+      </ul>
+    </div>
+  </div>
+  <!-- /card -->
   <div class="row">
     <div class="col-sm-6 col-lg-3">
       <div class="social-box facebook">

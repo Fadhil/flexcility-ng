@@ -23,6 +23,18 @@ export const routes: Routes = [
         loadChildren: './dashboard/dashboard.module#DashboardModule'
       },
       {
+        path: 'service-requisition',
+        loadChildren: './service-requisition/service-requisition.module#ServiceRequisitionModule'
+      },
+      {
+        path: 'work-requests',
+        loadChildren: './work-request/work-request.module#WorkRequestModule'
+      },
+      {
+        path: 'work-orders',
+        loadChildren: './work-order/work-order.module#WorkOrderModule'
+      },
+      {
         path: 'components',
         loadChildren: './components/components.module#ComponentsModule'
       },

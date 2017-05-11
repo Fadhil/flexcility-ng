@@ -12,7 +12,9 @@ import 'rxjs/add/operator/filter';
       <a *ngIf="!last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</a>
       <span *ngIf="last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</span>
     </li>
-  </ng-template>`
+  </ng-template>
+
+  `
 })
 export class BreadcrumbsComponent implements OnInit {
   breadcrumbs: Array<Object>;
