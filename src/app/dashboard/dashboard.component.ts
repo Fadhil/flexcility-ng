@@ -6,7 +6,9 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+  
   // constructor( ) { }
+
 
   public brandPrimary = '#20a8d8';
   public brandSuccess = '#4dbd74';
@@ -66,19 +68,56 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
-  // barChart
+  // ppmbarChart
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: true
   };
   public barChartLabels: string[] = ['Mechanical', 'Electrical', 'Civil', 'HSK', 'G & Landscape', 'Pest Control', 'Security'];
   public barChartType = 'horizontalBar';
+  public barChartTotals = [733,93]
+  public barChartPercentage = 93
   public barChartLegend = true;
 
   public barChartData: any[] = [
     {data: [12, 12, 5, 9, 7, 0, 0], label: 'Not Completed'},
     {data: [89, 121, 93, 29, 236, 0, 120], label: 'Completed'}
   ];
+
+    public updatePpmDataDay(){
+    this.barChartData =   [
+      {data: [1, 0, 4, 1, 6, 1, 0], label: 'Not Completed'},
+      {data: [2, 5, 10, 3, 12, 3, 1], label: 'Completed'}
+    ];
+
+    this.barChartTotals = [13, 9];
+    this.barChartPercentage = 68;
+
+  };
+
+  public updatePpmDataMonth(){
+    this.barChartData =   [
+      {data: [7, 0, 8, 2, 12, 2, 0], label: 'Not Completed'},
+      {data: [13, 9, 15, 5, 24, 8, 8], label: 'Completed'}
+    ];
+
+    this.barChartTotals = [26,18];
+    this.barChartPercentage = 59;
+
+  };
+
+  public updatePpmDataYear(){
+    this.barChartData =   [
+      {data: [19, 8, 14, 21, 9, 12, 9], label: 'Not Completed'},
+      {data: [40, 25, 50, 53, 32, 39, 11], label: 'Completed'}
+    ];
+
+    this.barChartTotals = [121,30];
+    this.barChartPercentage = 80;
+
+  };
+
+
 
   // scmBarChart
   public scmBarChartOptions: any = {
@@ -135,12 +174,47 @@ export class DashboardComponent implements OnInit {
   };
   public cmBarChartLabels: string[] = ['Mechanical', 'Electrical', 'Civil', 'HSK', 'G & Landscape', 'Pest Control', 'Security'];
   public cmBarChartType = 'horizontalBar';
+  public cmBarChartTotals = [113,72];
+  public cmBarChartPercentage = 72;
   public cmBarChartLegend = true;
 
   public cmBarChartData: any[] = [
     {data: [7, 0, 8, 2, 12, 2, 0], label: 'Not Completed'},
     {data: [13, 9, 15, 5, 24, 8, 8], label: 'Completed'}
   ];
+
+    public updateCmDataDay(){
+    this.cmBarChartData =   [
+      {data: [1, 0, 4, 1, 6, 1, 0], label: 'Not Completed'},
+      {data: [2, 5, 10, 3, 12, 3, 1], label: 'Completed'}
+    ];
+
+    this.cmBarChartTotals = [13, 9];
+    this.cmBarChartPercentage = 68;
+
+  };
+
+  public updateCmDataMonth(){
+    this.cmBarChartData =   [
+      {data: [7, 0, 8, 2, 12, 2, 0], label: 'Not Completed'},
+      {data: [13, 9, 15, 5, 24, 8, 8], label: 'Completed'}
+    ];
+
+    this.cmBarChartTotals = [26,18];
+    this.cmBarChartPercentage = 59;
+
+  };
+
+  public updateCmDataYear(){
+    this.cmBarChartData =   [
+      {data: [19, 8, 14, 21, 9, 12, 9], label: 'Not Completed'},
+      {data: [40, 25, 50, 53, 32, 39, 11], label: 'Completed'}
+    ];
+
+    this.cmBarChartTotals = [121,30];
+    this.cmBarChartPercentage = 80;
+
+  };
 
 
 
