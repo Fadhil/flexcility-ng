@@ -7,6 +7,7 @@ import { Routes,
 
 import { WorkRequestComponent } from './work-request.component';
 import { WorkRequestVerificationComponent } from './work-request-verification/work-request-verification.component';
+import { WorkRequestIndexComponent } from './work-request-index/work-request-index.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,13 @@ const routes: Routes = [
     component: WorkRequestVerificationComponent,
     data: {
       title: 'Work Request Verification'
+    }
+  },
+  {
+    path: 'index',
+    component: WorkRequestIndexComponent,
+    data: {
+      title: 'Work Request Listing'
     }
   }
 ];

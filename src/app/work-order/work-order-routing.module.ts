@@ -7,6 +7,7 @@ import { Routes,
 
 import { WorkOrderComponent } from './work-order.component';
 import { WorkOrderExecutionComponent } from './work-order-execution/work-order-execution.component';
+import { WorkOrderReportComponent } from './work-order-report/work-order-report.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,13 @@ const routes: Routes = [
     component: WorkOrderExecutionComponent,
     data: {
       title: 'Work Order Execution'
+    }
+  },
+  {
+    path: 'report',
+    component: WorkOrderReportComponent,
+    data: {
+      title: 'Work Order Report'
     }
   }
 ];
