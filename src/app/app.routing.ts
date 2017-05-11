@@ -27,6 +27,10 @@ export const routes: Routes = [
         loadChildren: './service-requisition/service-requisition.module#ServiceRequisitionModule'
       },
       {
+        path: 'work-requests',
+        loadChildren: './work-request/work-request.module#WorkRequestModule'
+      },
+      {
         path: 'components',
         loadChildren: './components/components.module#ComponentsModule'
       },
