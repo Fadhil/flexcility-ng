@@ -8,5 +8,12 @@ export class SimpleLayoutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+    let body = document.getElementsByTagName('body')[0];
+
+    body.classList.remove("sidebar-fixed"); //remove the class
+
+    body.classList.add("sidebar-hidden"); //add the class
+  }
 }

@@ -19,5 +19,12 @@ export class FullLayoutComponent implements OnInit {
     this.status.isopen = !this.status.isopen;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    let body = document.getElementsByTagName('body')[0];
+
+    body.classList.remove("sidebar-hidden"); //remove the class
+
+    body.classList.add("sidebar-fixed"); //add the class
+  }
 }
