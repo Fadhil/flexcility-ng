@@ -17,7 +17,7 @@ export class UserService {
   }
 
   create(user: User) {
-    return this.http.post(this.config.apiUrl + '/api/users', user, this.jwt());
+    return this.http.post(this.config.apiUrl + '/api/users', user, this.jwt()).map((response: Response) => response.json());
   }
 
   update(user: User) {
