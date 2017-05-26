@@ -27,6 +27,7 @@ import { ImageUploadModule } from 'angular2-image-upload';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { AlertService, AuthenticationService, UserService } from './shared/services/index';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
+import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
 
 @NgModule({
   imports: [
@@ -50,6 +51,7 @@ import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component
     AsideToggleDirective,
     AlertComponent,
     TechLayoutComponent,
+    HelpdeskLayoutComponent,
   ],
   providers: [{
     provide: LocationStrategy,

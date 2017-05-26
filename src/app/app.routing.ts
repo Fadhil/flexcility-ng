@@ -7,6 +7,7 @@ import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
+import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
 
 export const routes: Routes = [
   {
@@ -96,6 +97,19 @@ export const routes: Routes = [
       {
         path: 'work-requests',
         loadChildren: './work-request/work-request.module#WorkRequestModule'
+      }
+    ]
+  },
+  {
+    path: 'helpdesk',
+    component: HelpdeskLayoutComponent,
+    data: {
+      title: 'Tech'
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './helpdesk/helpdesk.module#HelpdeskModule'
       }
     ]
   },
