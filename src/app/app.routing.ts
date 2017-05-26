@@ -95,8 +95,8 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'work-requests',
-        loadChildren: './work-request/work-request.module#WorkRequestModule'
+        path: '',
+        loadChildren: './technician/technician.module#TechnicianModule'
       }
     ]
   },
@@ -104,7 +104,7 @@ export const routes: Routes = [
     path: 'helpdesk',
     component: HelpdeskLayoutComponent,
     data: {
-      title: 'Tech'
+      title: 'Helpdesk'
     },
     children: [
       {
