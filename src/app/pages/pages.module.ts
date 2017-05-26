@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 
 import { P404Component } from './404.component';
 import { P500Component } from './500.component';
-import { LoginComponent } from '../accounts/login.component';
-import { RegisterComponent } from '../accounts/register.component';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -13,8 +11,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   declarations: [
     P404Component,
     P500Component,
-    LoginComponent,
-    RegisterComponent,
     LandingPageComponent
   ]
 })
