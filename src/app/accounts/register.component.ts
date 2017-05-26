@@ -6,7 +6,9 @@ import { AlertService, UserService } from '../shared/services/index';
   templateUrl: 'register.component.html'
 })
 export class RegisterComponent {
-  model: any = {};
+  model: any = { user: {
+
+  }};
   loading = false;
   constructor(
     private router: Router,
@@ -23,6 +25,7 @@ export class RegisterComponent {
           this.router.navigate(['/accounts/login']);
         },
         error => {
+          console.log("Errored", error);
           this.alertService.error(error._body);
           this.loading = false;
         });
