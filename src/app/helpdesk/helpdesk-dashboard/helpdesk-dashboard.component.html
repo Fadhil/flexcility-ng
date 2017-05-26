@@ -89,4 +89,207 @@
       </div>
     </div><!--/.col-->
   </div>
+  <hr>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Work Requests
+        </div>
+        <div class="card-block">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Work Request ID</th>
+              <th>Date registered</th>
+              <th>PIC</th>
+              <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-toggle="modal" (click)="assignWorkRequestModal.show()">
+              <td>SM-0170</td>
+              <td>28/05/2017</td>
+              <td>Henry Welding</td>
+              <td>
+                <span class="badge badge-primary">New</span>
+              </td>
+            </tr>
+            <tr>
+              <td>SM-0171</td>
+              <td>16/05/2017</td>
+              <td>Sandra Lee</td>
+              <td>
+                <span class="badge badge-success">Verified</span>
+              </td>
+            </tr>
+            <tr>
+              <td>SM-1075</td>
+              <td>09/05/2017</td>
+              <td>Jason Wong</td>
+              <td>
+                <span class="badge badge-warning">Ongoing</span>
+              </td>
+            </tr>
+            <tr>
+              <td>SM-1077</td>
+              <td>26/03/2017</td>
+              <td>Charlene Patricia</td>
+              <td>
+                <span class="badge badge-success">Verified</span>
+              </td>
+            </tr>
+            <tr>
+              <td>SM-1079</td>
+              <td>23/03/2017</td>
+              <td>Henry Welding</td>
+              <td>
+                <span class="badge badge-warning">Ongoing</span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<div bsModal #assignWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="assignWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Assign Work Request</h4>
+        <button type="button" class="close" (click)="assignWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-header">
+            <strong>Work Request Number - MT-M-0182</strong>
+          </div>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-6">
+                <img width="240px" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/175/cache/room-air-conditioner_17521_600x450.jpg"/>
+              </div>
+            </div>
+            <br/>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_trait">Job Trait</label>
+              <div class="col-md-9">
+                <select id="job_trait" name="job_trait" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Mechanical</option>
+                  <option value="2">Electrical</option>
+                  <option value="3">Civil</option>
+                  <option value="4">Housekeeping</option>
+                  <option value="5">Gardening and Landscaping</option>
+
+                  <option value="6">Pest Control</option>
+
+                  <option value="7">Security</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">Job Type</label>
+              <div class="col-md-9">
+                <select id="job_type" name="job_type" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Planned Preventive Maintenance </option>
+                  <option value="2">Service Contract Maintenance</option>
+                  <option value="3">Corrective Maintenance</option>
+                  <option value="4">Routine Inspection</option>
+                  <option value="5">Event</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">High Priority</label>
+              <div class="col-md-9">
+                <label class="">
+                  <input type="checkbox">
+                </label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 form-control-label" for="job_type">Assign To</label>
+              <div class="col-md-9">
+                <select id="job_type" name="job_type" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Henry Welding</option>
+                  <option value="2">Sandra Lee</option>
+                  <option value="3">Leonard Tan</option>
+                  <option value="4">Jessica Liew</option>
+                  <option value="5">Jason Wong</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--<div class="card-footer">-->
+            <!--<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-requests/verification']"><i class="fa fa-dot-circle-o"></i> Submit</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="assignWorkRequestModal.hide(); cancelWorkRequestModal.show()">Cancel Work Request</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="assignWorkRequestModal.hide(); assignSuccessWorkRequestModal.show()">Assign Work Request</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #cancelWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cancelWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cancel Work Request</h4>
+        <button type="button" class="close" (click)="cancelWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="reason">Reason:</label>
+          <input type="text" class="form-control" id="reason" placeholder="Reason for closing Work Request">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #assignSuccessWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="assignSuccessWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Successfully Assigned Work Request</h4>
+        <button type="button" class="close" (click)="assignSuccessWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <h4>To: Jason Wong</h4>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="assignSuccessWorkRequestModal.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
