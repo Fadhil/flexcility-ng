@@ -8,7 +8,7 @@ import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
 })
 export class WorkRequestNewComponent implements OnInit {
 
-  private showAssign: boolean = false;
+  public showAssign: boolean = false;
   constructor() { }
 
   ngOnInit() {
