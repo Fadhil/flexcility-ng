@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.authenticationService.logout();
 
     // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
   }
 
   login() {
@@ -33,7 +33,13 @@ export class LoginComponent implements OnInit {
     this.authenticationService.login(this.model.email, this.model.password)
       .subscribe(
         data => {
-          this.router.navigate([this.returnUrl]);
+          var user = JSON.parse(localStorage.getItem('currentUser'));
+          if(user.role == 'Admin'){
+            this.router.navigate([this.returnUrl]);
+          } else {
+            this.router.navigate(['/pages/welcome']);
+          }
+
         },
         error => {
           this.alertService.error(error._body);
