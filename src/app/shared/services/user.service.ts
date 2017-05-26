@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
-import { AppConfig } from '../app.config';
-import { User } from '../models/index';
+import { AppConfig } from '../../app.config';
+import { User } from '../../models/index';
 
 @Injectable()
 export class UserService {
@@ -38,6 +38,4 @@ export class UserService {
       return new RequestOptions({ headers: headers });
     }
   }
-}/**
- * Created by fadhil on 26/05/2017.
- */
+}
