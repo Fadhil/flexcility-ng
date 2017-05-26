@@ -71,7 +71,8 @@
             </tr>
             </thead>
             <tbody>
-            <tr data-toggle="modal" (click)="closeWorkOrderModal.show()">
+            <!--<tr data-toggle="modal" (click)="closeWorkOrderModal.show()">-->
+            <tr [routerLink]="['/tech/work-order-execution']">
               <td>SM-1080</td>
               <td>26/05/2017</td>
               <td>Repair pipe burst at ground floor lobby toilet</td>
@@ -196,112 +197,112 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div bsModal #closeWorkOrderModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="closeWorkOrderModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Close Work Order</h4>
-        <button type="button" class="close" (click)="closeWorkOrderModal.hide()" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="card">
-          <div class="card-header">
-            <strong>Work Order Completion</strong>
-          </div>
-
-          <div class="card-block">
-            <div class="form-group row">
-              <label class="col-md-3 form-control-label" for="job_trait">Action Taken</label>
-              <div class="col-md-9">
-                <select id="job_trait" name="job_trait" class="form-control">
-                  <option value="0">Repair</option>
-                  <option value="1">Clean</option>
-                  <option value="2">Replace</option>
-                  <option value="3">Testing and Commissioning</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="form-group">
-                  <label for="action_description">Action Description:</label>
-                  <textarea id="action_description" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
-
-                </div>
-              </div>
-            </div><!--/.row-->
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="form-group">
-                  <label for="action_description">Spare Parts/Consumables:</label>
-                  <div class="row">
-                    <div class="col-sm-4">
-                      Part Name
-
-                      <input type="text" class="form-control" id="part1" placeholder="Enter part name">
-
-                      <input type="text" class="form-control" id="part2" placeholder="Enter part name">
-
-                      <input type="text" class="form-control" id="part3" placeholder="Enter part name">
-                    </div>
-                    <div class="col-sm-4">
-                      Part Code
-
-                      <input type="text" class="form-control" id="part_code1" placeholder="Enter part code">
-
-                      <input type="text" class="form-control" id="part_code2" placeholder="Enter part code">
-
-                      <input type="text" class="form-control" id="part_code3" placeholder="Enter part code">
-                    </div>
-                    <div class="col-sm-4">
-                      Quantity
-
-                      <input type="text" class="form-control" id="part_quantity1" placeholder="Enter quantity">
-
-                      <input type="text" class="form-control" id="part_quantity2" placeholder="Enter quantity">
-
-                      <input type="text" class="form-control" id="part_quantity3" placeholder="Enter quantity">
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div><!--/.row-->
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="form-group">
-                  <label for="cost_of_work">Cost of Work</label>
-                  <input type="text" class="form-control" id="cost_of_work" placeholder="Enter total cost">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="form-group">
-                  <label for="name"><strong>Work verified by:</strong></label>
-                  Ir. Harris Khalid
-                </div>
-              </div>
-            </div><!--/.row-->
-            <div class="form-group row">
-              <label class="col-md-3 form-control-label" for="file-input">Image Upload</label>
-              <div class="col-md-9">
-                <input type="file" id="file-input" name="file-input">
-              </div>
-            </div>
-
-          </div>
-          <!--<div class="card-footer">-->
-            <!--<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders/report']">Close Work Order</button>-->
+<!--<div bsModal #closeWorkOrderModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="closeWorkOrderModalLabel" aria-hidden="true">-->
+  <!--<div class="modal-dialog modal-lg" role="document">-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-header">-->
+        <!--<h4 class="modal-title">Close Work Order</h4>-->
+        <!--<button type="button" class="close" (click)="closeWorkOrderModal.hide()" aria-label="Close">-->
+          <!--<span aria-hidden="true">&times;</span>-->
+        <!--</button>-->
+      <!--</div>-->
+      <!--<div class="modal-body">-->
+        <!--<div class="card">-->
+          <!--<div class="card-header">-->
+            <!--<strong>Work Order Completion</strong>-->
           <!--</div>-->
-        </div>
-      </div>
-      <div class="modal-footer">
-        <!--<button type="button" class="btn btn-secondary" data-toggle="modal" (click)="closeWorkOrderModal.hide()">Cancel</button>-->
-        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="closeWorkOrderModal.hide()">Close Work Order</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+
+          <!--<div class="card-block">-->
+            <!--<div class="form-group row">-->
+              <!--<label class="col-md-3 form-control-label" for="job_trait">Action Taken</label>-->
+              <!--<div class="col-md-9">-->
+                <!--<select id="job_trait" name="job_trait" class="form-control">-->
+                  <!--<option value="0">Repair</option>-->
+                  <!--<option value="1">Clean</option>-->
+                  <!--<option value="2">Replace</option>-->
+                  <!--<option value="3">Testing and Commissioning</option>-->
+                <!--</select>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+              <!--<div class="col-sm-12">-->
+                <!--<div class="form-group">-->
+                  <!--<label for="action_description">Action Description:</label>-->
+                  <!--<textarea id="action_description" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>-->
+
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+            <!--<div class="row">-->
+              <!--<div class="col-sm-12">-->
+                <!--<div class="form-group">-->
+                  <!--<label for="action_description">Spare Parts/Consumables:</label>-->
+                  <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                      <!--Part Name-->
+
+                      <!--<input type="text" class="form-control" id="part1" placeholder="Enter part name">-->
+
+                      <!--<input type="text" class="form-control" id="part2" placeholder="Enter part name">-->
+
+                      <!--<input type="text" class="form-control" id="part3" placeholder="Enter part name">-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                      <!--Part Code-->
+
+                      <!--<input type="text" class="form-control" id="part_code1" placeholder="Enter part code">-->
+
+                      <!--<input type="text" class="form-control" id="part_code2" placeholder="Enter part code">-->
+
+                      <!--<input type="text" class="form-control" id="part_code3" placeholder="Enter part code">-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                      <!--Quantity-->
+
+                      <!--<input type="text" class="form-control" id="part_quantity1" placeholder="Enter quantity">-->
+
+                      <!--<input type="text" class="form-control" id="part_quantity2" placeholder="Enter quantity">-->
+
+                      <!--<input type="text" class="form-control" id="part_quantity3" placeholder="Enter quantity">-->
+                    <!--</div>-->
+                  <!--</div>-->
+
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+            <!--<div class="row">-->
+              <!--<div class="col-sm-12">-->
+                <!--<div class="form-group">-->
+                  <!--<label for="cost_of_work">Cost of Work</label>-->
+                  <!--<input type="text" class="form-control" id="cost_of_work" placeholder="Enter total cost">-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+              <!--<div class="col-sm-12">-->
+                <!--<div class="form-group">-->
+                  <!--<label for="name"><strong>Work verified by:</strong></label>-->
+                  <!--Ir. Harris Khalid-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>&lt;!&ndash;/.row&ndash;&gt;-->
+            <!--<div class="form-group row">-->
+              <!--<label class="col-md-3 form-control-label" for="file-input">Image Upload</label>-->
+              <!--<div class="col-md-9">-->
+                <!--<input type="file" id="file-input" name="file-input">-->
+              <!--</div>-->
+            <!--</div>-->
+
+          <!--</div>-->
+          <!--&lt;!&ndash;<div class="card-footer">&ndash;&gt;-->
+            <!--&lt;!&ndash;<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders/report']">Close Work Order</button>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="modal-footer">-->
+        <!--&lt;!&ndash;<button type="button" class="btn btn-secondary" data-toggle="modal" (click)="closeWorkOrderModal.hide()">Cancel</button>&ndash;&gt;-->
+        <!--<button type="button" class="btn btn-primary" data-toggle="modal" (click)="closeWorkOrderModal.hide()">Close Work Order</button>-->
+      <!--</div>-->
+    <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+  <!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--</div>&lt;!&ndash; /.modal &ndash;&gt;-->
