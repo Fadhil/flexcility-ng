@@ -5,6 +5,8 @@ import { AuthGuard } from './shared/guard/auth.guard';
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 
 export const routes: Routes = [
   {
@@ -68,6 +70,32 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: './accounts/accounts.module#AccountsModule',
+      }
+    ]
+  },
+  {
+    path: 'client',
+    component: ClientLayoutComponent,
+    data: {
+      title: 'Client'
+    },
+    children: [
+      {
+        path: 'work-requests',
+        loadChildren: './work-request/work-request.module#WorkRequestModule'
+      }
+    ]
+  },
+  {
+    path: 'tech',
+    component: TechLayoutComponent,
+    data: {
+      title: 'Tech'
+    },
+    children: [
+      {
+        path: 'work-requests',
+        loadChildren: './work-request/work-request.module#WorkRequestModule'
       }
     ]
   },

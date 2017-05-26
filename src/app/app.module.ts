@@ -21,10 +21,12 @@ import { AppConfig } from './app.config';
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { AlertComponent } from './shared/alert/alert.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { AlertService, AuthenticationService, UserService } from './shared/services/index';
+import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 
 @NgModule({
   imports: [
@@ -41,11 +43,13 @@ import { AlertService, AuthenticationService, UserService } from './shared/servi
     AppComponent,
     FullLayoutComponent,
     SimpleLayoutComponent,
+    ClientLayoutComponent,
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective,
     AlertComponent,
+    TechLayoutComponent,
   ],
   providers: [{
     provide: LocationStrategy,
