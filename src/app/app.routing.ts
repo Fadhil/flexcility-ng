@@ -8,7 +8,7 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'pages/welcome',
     pathMatch: 'full',
   },
   {
@@ -63,9 +63,24 @@ export const routes: Routes = [
       title: 'Accounts'
     },
     children: [
+
       {
         path: '',
         loadChildren: './accounts/accounts.module#AccountsModule',
+      }
+    ]
+  },
+  {
+    path: 'pages',
+    component: SimpleLayoutComponent,
+    data: {
+      title: 'Pages'
+    },
+    children: [
+
+      {
+        path: '',
+        loadChildren: './pages/pages.module#PagesModule'
       }
     ]
   }
