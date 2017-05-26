@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HelpdeskDashboardComponent } from './helpdesk-dashboard/helpdesk-dashboard.component';
+import { NewWorkRequestsComponent } from './new-work-requests/new-work-requests.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,13 @@ const routes: Routes = [
         component: HelpdeskDashboardComponent,
         data: {
           title: 'Helpdesk Dashboard'
+        }
+      },
+      {
+        path: 'new-work-requests',
+        component: NewWorkRequestsComponent,
+        data: {
+          title: 'Helpdesk New Work Requests'
         }
       }
     ]
