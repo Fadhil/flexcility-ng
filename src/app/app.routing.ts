@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './shared/guard/auth.guard';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
@@ -8,12 +9,12 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'pages/welcome',
     pathMatch: 'full',
   },
   {
     path: '',
-    component: FullLayoutComponent,
+    component: FullLayoutComponent, canActivate: [AuthGuard],
     data: {
       title: 'Home'
     },
@@ -21,6 +22,10 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'helpdesk-dashboard',
+        loadChildren: './helpdesk-dashboard/helpdesk-dashboard.module#HelpdeskDashboardModule'
       },
       {
         path: 'service-requisition',
@@ -59,9 +64,24 @@ export const routes: Routes = [
       title: 'Accounts'
     },
     children: [
+
       {
         path: '',
         loadChildren: './accounts/accounts.module#AccountsModule',
+      }
+    ]
+  },
+  {
+    path: 'pages',
+    component: SimpleLayoutComponent,
+    data: {
+      title: 'Pages'
+    },
+    children: [
+
+      {
+        path: '',
+        loadChildren: './pages/pages.module#PagesModule'
       }
     ]
   }

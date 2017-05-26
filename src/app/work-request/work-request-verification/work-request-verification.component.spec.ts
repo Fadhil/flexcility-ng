@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
 import { WorkRequestVerificationComponent } from './work-request-verification.component';
 
 describe('WorkRequestVerificationComponent', () => {

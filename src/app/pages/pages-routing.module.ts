@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { P404Component } from './404.component';
 import { P500Component } from './500.component';
-import { LoginComponent } from './login.component';
-import { RegisterComponent } from './register.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {
@@ -28,17 +27,10 @@ const routes: Routes = [
         }
       },
       {
-        path: 'login',
-        component: LoginComponent,
+        path: 'welcome',
+        component: LandingPageComponent,
         data: {
-          title: 'Login Page'
-        }
-      },
-      {
-        path: 'register',
-        component: RegisterComponent,
-        data: {
-          title: 'Register Page'
+          title: 'Landing Page'
         }
       }
     ]
