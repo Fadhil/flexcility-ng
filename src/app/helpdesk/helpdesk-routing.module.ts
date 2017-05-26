@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HelpdeskDashboardComponent } from './helpdesk-dashboard/helpdesk-dashboard.component';
-import { NewWorkRequestsComponent } from './new-work-requests/new-work-requests.component';
+import { WorkRequestsComponent } from './work-requests/work-requests.component';
 
 const routes: Routes = [
   {
@@ -19,8 +19,8 @@ const routes: Routes = [
         }
       },
       {
-        path: 'new-work-requests',
-        component: NewWorkRequestsComponent,
+        path: 'work-requests',
+        component: WorkRequestsComponent,
         data: {
           title: 'Helpdesk New Work Requests'
         }
