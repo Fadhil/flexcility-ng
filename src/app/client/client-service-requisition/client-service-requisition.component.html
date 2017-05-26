@@ -1,0 +1,72 @@
+<div class="animated fadeIn">
+  <br>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Requester Information
+        </div>
+        <div class="card-block">
+          <table>
+            <tr>
+              <th>Staff ID:</th><td>87223</td>
+            </tr>
+            <tr>
+              <th>Department:</th><td>Human Resource</td>
+            </tr>
+            <tr>
+              <th>Name:</th><td>Pn Sophia Jamal</td>
+            </tr>
+            <tr>
+              <th>Phone Number:</th><td>0108878288 </td>
+            </tr>
+            <tr>
+              <th>Email:</th><td>sophia.j@gmail.com </td>
+            </tr>
+          </table>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-requests/verification']"><i class="fa fa-dot-circle-o"></i> Edit</button>
+        </div>
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Building Information</strong>
+        </div>
+        <div class="card-block">
+          <div class="form-group">
+            <label for="building_name">Building Name</label>
+            <input type="text" class="form-control" id="building_name" placeholder="Enter building name">
+          </div>
+          <div class="form-group">
+            <label for="block">Block</label>
+            <input type="text" class="form-control" id="block" placeholder="Block A">
+          </div>
+          <div class="form-group">
+            <label for="location">Room/Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Enter Location">
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" for="request_details">Request Details</label>
+
+            <textarea id="request_details" name="request_details" rows="9" class="form-control" placeholder="Request Details .."></textarea>
+
+          </div>
+          <image-upload></image-upload>
+          <!--<div class="form-group row">-->
+          <!--<label class="col-md-3 form-control-label" for="file-input">Image Upload</label>-->
+          <!--<div class="col-md-9">-->
+          <!--<input type="file" id="file-input" name="file-input">-->
+          <!--</div>-->
+          <!--</div>-->
+        </div>
+
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-requests']"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div>
+</div>

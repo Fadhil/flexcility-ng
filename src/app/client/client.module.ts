@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { ClientServiceRequisitionComponent } from './client-service-requisition/client-service-requisition.component';
+import { ClientRoutingModule } from './client-routing.module';
+import { ImageUploadModule } from 'angular2-image-upload';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ClientRoutingModule,
+    ImageUploadModule.forRoot()
   ],
-  declarations: []
+  declarations: [ClientServiceRequisitionComponent]
 })
 export class ClientModule { }

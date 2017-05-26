@@ -81,8 +81,8 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'work-requests',
-        loadChildren: './work-request/work-request.module#WorkRequestModule'
+        path: '',
+        loadChildren: './client/client.module#ClientModule'
       }
     ]
   },
