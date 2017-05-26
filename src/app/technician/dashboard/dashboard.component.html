@@ -1,3 +1,197 @@
-<p>
-  dashboard works!
-</p>
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Work Requests
+        </div>
+        <div class="card-block">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Work Request ID</th>
+              <th>Date registered</th>
+              <th>Description</th>
+              <th>Trait</th>
+              <th>Type</th>
+              <th>Priority</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-toggle="modal" (click)="verifyWorkRequestModal.show()">
+              <td>SM-0170</td>
+              <td>28/05/2017</td>
+              <td>Aircond not functioning. Air blowing, but not cold.</td>
+              <td>Electrical</td>
+              <td>Corrective Maintenance</td>
+              <td><span class="badge badge-primary">Normal</span></td>
+
+            </tr>
+            <tr>
+              <td>SM-1075</td>
+              <td>09/05/2017</td>
+              <td>Escalator speed not correct.</td>
+              <td>Mechanical</td>
+              <td>Corrective Maintenance</td>
+              <td><span class="badge badge-danger">High</span></td>
+            </tr>
+
+            </tbody>
+          </table>
+          <!--<ul class="pagination">-->
+            <!--<li class="page-item"><a class="page-link" href="#">Prev</a></li>-->
+            <!--<li class="page-item active">-->
+              <!--<a class="page-link" href="#">1</a>-->
+            <!--</li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">4</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Work Orders
+        </div>
+        <div class="card-block">
+          <table class="table"  [routerLink]="['/work-orders']">
+            <thead>
+            <tr>
+              <th>Work Order ID</th>
+              <th>Date registered</th>
+              <th>Description</th>
+              <th>Trait</th>
+              <th>Type</th>
+              <th>Priority</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>SM-1080</td>
+              <td>26/05/2017</td>
+              <td>Repair pipe burst at ground floor lobby toilet</td>
+              <td>Mechanical</td>
+              <td>Corective Maintenance</td>
+              <td><span class="badge badge-danger">High</span></td>
+
+            </tr>
+            </tbody>
+          </table>
+          <!--<ul class="pagination">-->
+            <!--<li class="page-item"><a class="page-link" href="#">Prev</a></li>-->
+            <!--<li class="page-item active">-->
+              <!--<a class="page-link" href="#">1</a>-->
+            <!--</li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">4</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div bsModal #verifyWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="verifyWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Verify Work Request</h4>
+        <button type="button" class="close" (click)="verifyWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-header">
+            <strong>Verification</strong>
+          </div>
+
+          <div class="card-block">
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label" for="request_time"><strong>Requested On:</strong></label>
+              <div class="col-md-8">
+                11/05/2017 - 9.48am
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-4 form-control-label">Verified via</label>
+              <div class="col-md-8">
+                <div class="checkbox">
+                  <label for="checkbox1">
+                    <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Visual Inspection
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label for="checkbox2">
+                    <input type="checkbox" id="checkbox2" name="checkbox2" value="option2"> Phone
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label for="checkbox3">
+                    <input type="checkbox" id="checkbox3" name="checkbox3" value="option3"> Others
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="reason">Comments:</label>
+                  <textarea id="request_details" name="request_details" rows="4" class="form-control" placeholder="Additional Comments .."></textarea>
+
+                </div>
+              </div>
+            </div><!--/.row-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="reason">Reason:</label>
+                  <input type="text" class="form-control" id="reason" placeholder="Reason for closing">
+                </div>
+              </div>
+            </div><!--/.row-->
+          </div>
+          <!--<div class="card-footer">-->
+            <!--&lt;!&ndash;<button class="btn btn-sm btn-default" type="button" data-toggle="modal" (click)="cancelWorkRequestModal.show()">Close Work Request</button>&ndash;&gt;-->
+            <!--<button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/work-orders']"><i class="fa fa-dot-circle-o"></i>Create Work Order</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="verifyWorkRequestModal.hide(); cancelWorkRequestModal.show()">Cancel Work Request</button>
+        <button type="submit" class="btn btn-sm btn-primary pull-right" data-toggle="modal" (click)="verifyWorkRequestModal.hide()"><i class="fa fa-dot-circle-o"></i>Create Work Order</button>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #cancelWorkRequestModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="cancelWorkRequestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cancel Work Request</h4>
+        <button type="button" class="close" (click)="cancelWorkRequestModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="reason">Reason:</label>
+          <input type="text" class="form-control" id="reason" placeholder="Reason for closing Work Request">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Close</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" (click)="cancelWorkRequestModal.hide()">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

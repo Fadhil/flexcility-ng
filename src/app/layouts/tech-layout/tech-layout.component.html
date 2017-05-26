@@ -6,7 +6,7 @@
       <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
     </li>
     <li class="nav-item px-3">
-      <a class="nav-link" href="#">Technician Dashboard</a>
+      <strong>Technician Dashboard</strong>
     </li>
     <li class="nav-item px-3">
       <a class="nav-link" href="#">Jason Wong</a>
@@ -151,18 +151,18 @@
   <main class="main">
 
     <!-- Breadcrumb -->
-    <ol class="breadcrumb">
-      <app-breadcrumbs></app-breadcrumbs>
-      <!-- Breadcrumb Menu-->
-      <li class="breadcrumb-menu d-md-down-none">
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-          <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
-          <a class="btn btn-secondary" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
-          <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
-        </div>
-      </li>
-    </ol>
-
+    <!--<ol class="breadcrumb">-->
+      <!--<app-breadcrumbs></app-breadcrumbs>-->
+      <!--&lt;!&ndash; Breadcrumb Menu&ndash;&gt;-->
+      <!--<li class="breadcrumb-menu d-md-down-none">-->
+        <!--<div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+          <!--<a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>-->
+          <!--<a class="btn btn-secondary" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>-->
+          <!--<a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>-->
+        <!--</div>-->
+      <!--</li>-->
+    <!--</ol>-->
+<br>
     <div class="container-fluid">
       <alert></alert>
       <router-outlet></router-outlet>
