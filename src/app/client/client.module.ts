@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ClientServiceRequisitionComponent } from './client-service-requisition/client-service-requisition.component';
 import { ClientRoutingModule } from './client-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
+import { ClientServiceRequisitionSummaryComponent } from './client-service-requisition-summary/client-service-requisition-summary.component';
 
 
 @NgModule({
@@ -13,6 +14,6 @@ import { ImageUploadModule } from 'angular2-image-upload';
     ClientRoutingModule,
     ImageUploadModule.forRoot()
   ],
-  declarations: [ClientServiceRequisitionComponent]
+  declarations: [ClientServiceRequisitionComponent, ClientServiceRequisitionSummaryComponent]
 })
 export class ClientModule { }
