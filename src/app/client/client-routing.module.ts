@@ -8,11 +8,17 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
     data: {
       title: 'Client Pages'
     },
     children: [
+      {
+        path: 'home',
+        component: HomeComponent,
+        data: {
+          title: 'Client Home'
+        }
+      },
       {
         path: 'service-requisition',
         component: ClientServiceRequisitionComponent,

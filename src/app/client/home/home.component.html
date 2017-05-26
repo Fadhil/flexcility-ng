@@ -7,59 +7,69 @@
   </div>
   <div class="row">
     <div class="col-sm-12 col-md-6 offset-md-3">
-      <button class="btn btn-success btn-lg btn-block" type="button">Make a Work Request</button>
+      <button class="btn btn-success btn-lg btn-block" type="button" [routerLink]="['/client/service-requisition']">Make a Work Request</button>
     </div>
   </div>
 
   <hr>
   <div class="row">
+    <div class="col-sm-12 col-md-6 offset-md-3 text-center">
+      <h2>Shenzen Mall</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 offset-md-3 text-center">
+      <h6>HES Facilities Maintenance</h6>
+      <a><i class="icon-location-pin"></i> B-12M South Wing, 2nd Floor, Shenzen Mall</a>
+      <br>
+      <a><i class="icon-phone"></i>603 82517 889</a>
+      <br>
+      <a><i class="icon-envelope"></i>admin@hes-fm.com</a>
+
+    </div>
+  </div>
+  <br>
+  <div class="row">
     <div class="col-sm-12 col-md-6">
       <div class="card">
         <div class="card-header">
-          Latest Management Announcements
+          <strong>Shenzen Weather Forecast</strong>
         </div>
         <div class="card-block">
-          <table>
-            <tr>
-              <th>Staff ID:</th><td>87223</td>
-            </tr>
-            <tr>
-              <th>Department:</th><td>Human Resource</td>
-            </tr>
-            <tr>
-              <th>Name:</th><td>Pn Roslina Jamil</td>
-            </tr>
-            <tr>
-              <th>Phone Number:</th><td>0108878288 </td>
-            </tr>
-            <tr>
-              <th>Email:</th><td>r.jamil@gmail.com </td>
-            </tr>
-          </table>
+
+          <img width="95%" src="/assets/img/weather-widget.png"/>
+
         </div>
       </div>
     </div><!--/.col-->
     <div class="col-sm-12 col-md-6">
       <div class="card">
         <div class="card-header">
-          Requester Information
+          <strong>Latest Management Announcements</strong>
         </div>
         <div class="card-block">
           <table>
             <tr>
-              <th>Staff ID:</th><td>87223</td>
+              <th width="100px">Date</th>
+              <th width="300px">Announcement</th>
+              <th width="100px"></th>
             </tr>
-            <tr>
-              <th>Department:</th><td>Human Resource</td>
+            <tr class="border-bottom">
+              <td>25/5/2017</td>
+              <td>Temporary closing of parking bay Block G due to maintenance</td>
+              <td>28/5/2017 - 30/5/2017</td>
             </tr>
-            <tr>
-              <th>Name:</th><td>Pn Roslina Jamil</td>
+
+            <tr class="border-bottom">
+              <td>23/5/2017</td>
+              <td>Window cleaning activity on West Wing of Shenzen Mall</td>
+              <td>24/5/2017</td>
             </tr>
-            <tr>
-              <th>Phone Number:</th><td>0108878288 </td>
-            </tr>
-            <tr>
-              <th>Email:</th><td>r.jamil@gmail.com </td>
+
+            <tr class="border-bottom">
+              <td>12/2/2017</td>
+              <td>Escalator maintenance work on North Wing 2nd Floor Shenzen Mall</td>
+              <td>15/2/2017 - 20/2/2017</td>
             </tr>
           </table>
         </div>
