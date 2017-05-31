@@ -17,7 +17,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: FullLayoutComponent, canActivate: [AuthGuard],
+    component: FullLayoutComponent,
     data: {
       title: 'Home'
     },
