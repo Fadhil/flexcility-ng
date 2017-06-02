@@ -16,7 +16,7 @@
 
   </div>
   <div class="row">
-    <div class="col-md-2 col-sm-4 offset-md-2">
+    <div class="col-md-2 col-sm-4 offset-md-2" data-toggle="modal" (click)="myModal.show()">
       <div class="card">
         <div class="card-block card-primary text-center">
           <div class="text-uppercase font-weight-bold">New</div>
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div><!--/.col-->
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4" data-toggle="modal" (click)="myModal1.show()">
       <div class="card">
         <div class="card-block card-warning text-center">
           <div class="text-uppercase font-weight-bold">Open</div>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div><!--/.col-->
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4" data-toggle="modal" (click)="myModal2.show()">
       <div class="card">
         <div class="card-block card-success text-center">
           <div class="text-uppercase font-weight-bold">Verified</div>
@@ -40,15 +40,22 @@
         </div>
       </div>
     </div><!--/.col-->
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4" data-toggle="modal" (click)="myModal3.show()">
       <div class="card">
         <div class="card-block card-danger text-center">
           <div class=" text-uppercase font-weight-bold">Cancelled</div>
           <div class="h2 py-3">0</div>
+          <!--button type="button" class="btn btn-secondary" data-toggle="modal" (click)="myModal.show()">
+            Launch demo modal
+          </button-->
         </div>
       </div>
     </div><!--/.col-->
+     <div class="card-block">
+     </div>
   </div>
+
+
   <div class="row">
     <div class="col-md-6 offset-md-2">
       <h4>Work Orders</h4>
@@ -56,7 +63,7 @@
 
   </div>
   <div class="row">
-    <div class="col-md-2 col-sm-4 offset-md-2">
+    <div class="col-md-2 col-sm-4 offset-md-2"  data-toggle="modal" (click)="myModal4.show()">
       <div class="card">
         <div class="card-block card-primary text-center">
           <div class="text-uppercase font-weight-bold">New</div>
@@ -64,7 +71,7 @@
         </div>
       </div>
     </div><!--/.col-->
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4"  data-toggle="modal" (click)="myModal5.show()">
       <div class="card">
         <div class="card-block card-warning text-center">
           <div class="text-uppercase font-weight-bold">In Progress</div>
@@ -72,7 +79,7 @@
         </div>
       </div>
     </div><!--/.col-->
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4"  data-toggle="modal" (click)="myModal6.show()">
       <div class="card">
         <div class="card-block card-success text-center">
           <div class="text-uppercase font-weight-bold">Closed</div>
@@ -80,7 +87,7 @@
         </div>
       </div>
     </div><!--/.col-->
-    <div class="col-md-2 col-sm-4">
+    <div class="col-md-2 col-sm-4"  data-toggle="modal" (click)="myModal7.show()">
       <div class="card">
         <div class="card-block text-center card-quotation">
           <div class=" text-uppercase font-weight-bold">Quotations</div>
@@ -89,6 +96,7 @@
       </div>
     </div><!--/.col-->
   </div>
+
   <hr>
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
@@ -322,3 +330,436 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Request New Traits</h4>
+        <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>5</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>5</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal1="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Request Open Traits</h4>
+        <button type="button" class="close" (click)="myModal1.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal1.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal2="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work request Verified Traits</h4>
+        <button type="button" class="close" (click)="myModal2.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>2</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>2</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal2.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal3="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Request Cancelled Traits</h4>
+        <button type="button" class="close" (click)="myModal3.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal3.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal4="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Order New Traits</h4>
+        <button type="button" class="close" (click)="myModal4.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal4.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal5="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Order In Progress Traits</h4>
+        <button type="button" class="close" (click)="myModal5.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>2</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal5.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal6="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Order Closed Traits</h4>
+        <button type="button" class="close" (click)="myModal6.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>2</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal6.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div bsModal #myModal7="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Work Order Quotation Traits</h4>
+        <button type="button" class="close" (click)="myModal7.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table">
+      <thead>
+      <tr>
+      <th>Traits</th>
+      <th>Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Electrical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Mechanical</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Civil</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Housekeeping</td> 
+      <td><b>1</b></td>
+      </tr>
+      <tr>
+      <td>Gardening and Lansdscaping</td> 
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Pest Control</td>
+      <td><b>0</b></td>
+      </tr>
+      <tr>
+      <td>Security</td> 
+      <td><b>0</b></td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="myModal7.hide()">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
