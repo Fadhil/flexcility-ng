@@ -5,7 +5,11 @@ import { HttpModule } from '@angular/http';
 import { AdminRoutingModule } from './admin-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { AdminOrganizationComponent } from './admin-organization/admin-organization.component';
-import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminHomeComponent } from './admin-organization/admin-home/admin-home.component';
+import { AdminRegisterComponent } from './admin-organization/admin-register/admin-register.component';
+import { AdminSiteComponent } from './admin-organization/admin-site/admin-site.component';
+
+
 
 
 @NgModule({
@@ -14,6 +18,6 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     AdminRoutingModule,
     ImageUploadModule.forRoot()
   ],
-  declarations: [AdminOrganizationComponent, AdminHomeComponent]
+  declarations: [AdminOrganizationComponent]
 })
 export class AdminModule { }

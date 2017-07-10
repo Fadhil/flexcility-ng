@@ -1,29 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminOrganizationComponent } from './admin-organization/admin-organization.component';
-import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminHomeComponent } from './admin-organization/admin-home/admin-home.component';
+
+
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Admin Pages'
+      title: ''
     },
     children: [
       {
         path: 'organization',
         component: AdminOrganizationComponent,
-        data: {
-          title: 'Admin Organization'
-        }
-      },
-      {
-        path: 'home',
-        component: AdminHomeComponent,
-        data: {
-          title: 'Admin Home'
-        }
-      }
+        loadChildren: './admin-organization/admin-organization.module#AdminOrganizationModule'
+      }           
     ]
   }
 ];
