@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminRegisterComponent } from './admin-register/admin-register.component';
-import { AdminSiteComponent } from './admin-site/admin-site.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
-import { AdminOrganizationComponent } from './admin-organization.component';
+import { AdminTraitsComponent } from './admin-traits/admin-traits.component';
+
 
 
 const routes: Routes = [
@@ -26,14 +26,14 @@ const routes: Routes = [
         data: {
           title: 'Register'
         }
-      },           
+      },
       {
-        path: 'site',
-        component: AdminSiteComponent,
+        path: 'traits',
+        component: AdminTraitsComponent,
         data: {
-          title: 'Site'
+          title: 'Traits'
         }
-      }     
+      }    
      ]
   }
 ];
