@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
+
 
 @Component({
   selector: 'app-admin-register',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-register.component.scss']
 })
 export class AdminRegisterComponent implements OnInit {
+
 
   constructor() { }
 

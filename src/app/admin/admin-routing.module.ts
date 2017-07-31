@@ -5,6 +5,7 @@ import { AdminHomeComponent } from './admin-organization/admin-home/admin-home.c
 import { AdminSiteComponent } from './admin-site/admin-site.component';
 import { AdminAssetComponent } from './admin-asset/admin-asset.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
+import { AdminTeamComponent } from './admin-team/admin-team.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,13 @@ const routes: Routes = [
         path: 'user',
         component: AdminUserComponent,
         loadChildren: './admin-user/admin-user.module#AdminUserModule'
-      }           
+      },
+      {
+        path: 'team',
+        component: AdminTeamComponent,
+        loadChildren: './admin-team/admin-team.module#AdminTeamModule'
+      }
+
     ]
   }
 ];

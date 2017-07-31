@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -28,10 +28,16 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { AlertService, AuthenticationService, UserService } from './shared/services/index';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
+
 
 @NgModule({
   imports: [
     BrowserModule,
+    AngularMultiSelectModule,
+    ReactiveFormsModule,
+    MultiselectDropdownModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
