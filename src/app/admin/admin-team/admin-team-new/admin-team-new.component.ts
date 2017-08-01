@@ -25,15 +25,15 @@ export class AdminTeamNewComponent implements OnInit {
                               {"id":9,"itemName":"Akbar"},
                               {"id":10,"itemName":"Jauhari Dekati"}
                             ];
-        this.selectedItems = [
-                                {"id":2,"itemName":"Zamil Idris"},
-                                {"id":3,"itemName":"Zaidi Anwari"},
-                                {"id":4,"itemName":"Anuar Adam"},
-                                {"id":5,"itemName":"Clinton Joe"}
-                            ];
+        // this.selectedItems = [
+        //                         {"id":2,"itemName":"Zamil Idris"},
+        //                         {"id":3,"itemName":"Zaidi Anwari"},
+        //                         {"id":4,"itemName":"Anuar Adam"},
+        //                         {"id":5,"itemName":"Clinton Joe"}
+        //                     ];
         this.dropdownSettings = { 
                                   singleSelection: false, 
-                                  text:"Select User",
+                                  text:"Select Team Member",
                                   selectAllText:'Select All',
                                   unSelectAllText:'UnSelect All',
                                   enableSearchFilter: true

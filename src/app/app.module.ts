@@ -30,6 +30,7 @@ import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2
     AlertComponent,
     TechLayoutComponent,
     HelpdeskLayoutComponent,
+    AdminLayoutComponent,
   ],
   providers: [{
     provide: LocationStrategy,

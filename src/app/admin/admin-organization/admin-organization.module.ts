@@ -9,15 +9,18 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminTraitsComponent } from './admin-traits/admin-traits.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
-
-
+import { AdminEditComponent } from './admin-edit/admin-edit.component';
+import {ToolTipModule} from 'angular2-tooltip'
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   imports: [
     CommonModule,
+    ToolTipModule,
+    ModalModule.forRoot(),    
     AdminOrganizationRoutingModule,
     ImageUploadModule.forRoot()
   ],
-  declarations: [AdminRegisterComponent, AdminHomeComponent, AdminTraitsComponent, AdminListComponent, AdminViewComponent]
+  declarations: [AdminRegisterComponent, AdminHomeComponent, AdminTraitsComponent, AdminListComponent, AdminViewComponent, AdminEditComponent]
 })
 export class AdminOrganizationModule { }

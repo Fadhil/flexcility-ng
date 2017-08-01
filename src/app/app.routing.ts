@@ -8,6 +8,7 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 export const routes: Routes = [
   {
@@ -62,7 +63,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    component: FullLayoutComponent,
+    component: AdminLayoutComponent,
     data: {
       title: 'Admin'
     },
