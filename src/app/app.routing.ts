@@ -65,7 +65,7 @@ export const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     data: {
-      title: 'Admin'
+      title: ''
     },
     children: [
       {

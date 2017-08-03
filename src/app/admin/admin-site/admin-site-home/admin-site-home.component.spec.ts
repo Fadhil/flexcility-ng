@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminSiteSingleComponent } from './admin-site-single.component';
+import { AdminSiteHomeComponent } from './admin-site-home.component';
 
-describe('AdminSiteSingleComponent', () => {
-  let component: AdminSiteSingleComponent;
-  let fixture: ComponentFixture<AdminSiteSingleComponent>;
+describe('AdminSiteHomeComponent', () => {
+  let component: AdminSiteHomeComponent;
+  let fixture: ComponentFixture<AdminSiteHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminSiteSingleComponent ]
+      declarations: [ AdminSiteHomeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminSiteSingleComponent);
+    fixture = TestBed.createComponent(AdminSiteHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

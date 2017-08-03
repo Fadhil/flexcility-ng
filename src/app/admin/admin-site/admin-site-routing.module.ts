@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminSiteTypeComponent } from './admin-site-type/admin-site-type.component';
 import { AdminSiteComponent } from '../admin-site/admin-site.component';
 import { AdminSiteNewComponent } from '../admin-site/admin-site-new/admin-site-new.component';
-import { AdminSiteSingleComponent } from '../admin-site/admin-site-single/admin-site-single.component';
-import { AdminSiteMultipleComponent } from '../admin-site/admin-site-multiple/admin-site-multiple.component';
+import { AdminSiteHomeComponent } from './admin-site-home/admin-site-home.component';
+import { AdminSiteViewComponent } from './admin-site-view/admin-site-view.component';
+import { AdminSiteEditComponent } from './admin-site-edit/admin-site-edit.component';
 
 
 
@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: AdminSiteTypeComponent,
+        component: AdminSiteHomeComponent,
         data: {
           title: ''
         }
@@ -30,17 +30,17 @@ const routes: Routes = [
         }
       },
       {
-        path: 'single',
-        component: AdminSiteSingleComponent,
+        path: 'view',
+        component: AdminSiteViewComponent,
         data: {
-          title: 'single'
+          title: 'view'
         }
       },
       {
-        path: 'multiple',
-        component: AdminSiteMultipleComponent,
+        path: 'edit',
+        component: AdminSiteEditComponent,
         data: {
-          title: 'multiple'
+          title: 'Edit'
         }
       }   
      ]

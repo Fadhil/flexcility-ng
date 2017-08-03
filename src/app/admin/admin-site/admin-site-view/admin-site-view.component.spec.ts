@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminSiteMultipleComponent } from './admin-site-multiple.component';
+import { AdminSiteViewComponent } from './admin-site-view.component';
 
-describe('AdminSiteMultipleComponent', () => {
-  let component: AdminSiteMultipleComponent;
-  let fixture: ComponentFixture<AdminSiteMultipleComponent>;
+describe('AdminSiteViewComponent', () => {
+  let component: AdminSiteViewComponent;
+  let fixture: ComponentFixture<AdminSiteViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminSiteMultipleComponent ]
+      declarations: [ AdminSiteViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminSiteMultipleComponent);
+    fixture = TestBed.createComponent(AdminSiteViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

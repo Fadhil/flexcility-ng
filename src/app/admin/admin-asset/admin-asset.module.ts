@@ -9,12 +9,14 @@ import { AdminAssetNewComponent } from './admin-asset-new/admin-asset-new.compon
 import { AdminAssetImportComponent } from './admin-asset-import/admin-asset-import.component';
 import { AdminAssetViewComponent } from './admin-asset-view/admin-asset-view.component';
 import { AdminAssetEditComponent } from './admin-asset-edit/admin-asset-edit.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
+    ModalModule.forRoot(),
     AdminAssetRoutingModule,
     ImageUploadModule.forRoot()
   ],

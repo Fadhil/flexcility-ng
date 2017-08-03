@@ -6,7 +6,8 @@ import { AdminSiteComponent } from './admin-site/admin-site.component';
 import { AdminAssetComponent } from './admin-asset/admin-asset.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminTeamComponent } from './admin-team/admin-team.component';
-
+import { AdminWorkRequestComponent } from './admin-work-request/admin-work-request.component';
+import { AdminWorkOrderComponent } from './admin-work-order/admin-work-order.component';
 
 const routes: Routes = [
   {
@@ -15,11 +16,11 @@ const routes: Routes = [
       title: ''
     },
     children: [
-      {
-        path: 'organization',
-        component: AdminOrganizationComponent,
-        loadChildren: './admin-organization/admin-organization.module#AdminOrganizationModule'
-      },
+      // {
+      //   path: 'organization',
+      //   component: AdminOrganizationComponent,
+      //   loadChildren: './admin-organization/admin-organization.module#AdminOrganizationModule'
+      // },
       {
         path: 'site',
         component: AdminSiteComponent,
@@ -39,6 +40,16 @@ const routes: Routes = [
         path: 'team',
         component: AdminTeamComponent,
         loadChildren: './admin-team/admin-team.module#AdminTeamModule'
+      },
+      {
+        path: 'workorder',
+        component: AdminWorkOrderComponent,
+        loadChildren: './admin-work-order/admin-work-order.module#AdminWorkOrderModule'
+      },
+      {
+        path: 'workrequest',
+        component: AdminWorkRequestComponent,
+        loadChildren: './admin-work-request/admin-work-request.module#AdminWorkRequestModule'
       }
 
     ]

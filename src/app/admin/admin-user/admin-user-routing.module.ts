@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'user'
+      title: 'User'
     },
     children: [
       {

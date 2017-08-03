@@ -11,6 +11,8 @@ import { AdminAssetComponent } from './admin-asset/admin-asset.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminTeamComponent } from './admin-team/admin-team.component';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
+import { AdminWorkRequestComponent } from './admin-work-request/admin-work-request.component';
+import { AdminWorkOrderComponent } from './admin-work-order/admin-work-order.component';
 
 
 @NgModule({
@@ -22,6 +24,6 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2
     DndModule.forRoot(),
     ImageUploadModule.forRoot()
   ],
-  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent ]
+  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent ]
 })
 export class AdminModule { }

@@ -4,19 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AdminSiteRoutingModule } from './admin-site-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
-import { AdminSiteTypeComponent } from './admin-site-type/admin-site-type.component';
 import { AdminSiteNewComponent } from './admin-site-new/admin-site-new.component';
-import { AdminSiteSingleComponent } from './admin-site-single/admin-site-single.component';
-import { AdminSiteMultipleComponent } from './admin-site-multiple/admin-site-multiple.component';
+import { AdminSiteHomeComponent } from './admin-site-home/admin-site-home.component';
+import { AdminSiteViewComponent } from './admin-site-view/admin-site-view.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { AdminSiteEditComponent } from './admin-site-edit/admin-site-edit.component';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
+    ModalModule.forRoot(),
     AdminSiteRoutingModule,
     ImageUploadModule.forRoot()
   ],
-  declarations: [AdminSiteTypeComponent, AdminSiteNewComponent, AdminSiteSingleComponent, AdminSiteMultipleComponent]
+  declarations: [ AdminSiteNewComponent, AdminSiteHomeComponent, AdminSiteViewComponent, AdminSiteEditComponent]
 })
 export class AdminSiteModule { }
