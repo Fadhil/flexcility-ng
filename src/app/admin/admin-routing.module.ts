@@ -8,6 +8,9 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminTeamComponent } from './admin-team/admin-team.component';
 import { AdminWorkRequestComponent } from './admin-work-request/admin-work-request.component';
 import { AdminWorkOrderComponent } from './admin-work-order/admin-work-order.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminBuildingComponent } from './admin-building/admin-building.component';
+import { AdminAreaComponent } from './admin-area/admin-area.component';
 
 const routes: Routes = [
   {
@@ -50,8 +53,24 @@ const routes: Routes = [
         path: 'workrequest',
         component: AdminWorkRequestComponent,
         loadChildren: './admin-work-request/admin-work-request.module#AdminWorkRequestModule'
-      }
-
+      },
+      {
+        path: 'dashboard',
+        component: AdminDashboardComponent,
+        data: {
+        title: 'Dashboard'
+          }   
+      },
+      {
+        path: 'building',
+        component: AdminBuildingComponent,
+        loadChildren: './admin-building/admin-building.module#AdminBuildingModule'
+      },
+      {
+        path: 'area',
+        component: AdminAreaComponent,
+        loadChildren: './admin-area/admin-area.module#AdminAreaModule'
+      }  
     ]
   }
 ];

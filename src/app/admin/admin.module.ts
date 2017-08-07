@@ -13,17 +13,24 @@ import { AdminTeamComponent } from './admin-team/admin-team.component';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { AdminWorkRequestComponent } from './admin-work-request/admin-work-request.component';
 import { AdminWorkOrderComponent } from './admin-work-order/admin-work-order.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { AdminBuildingComponent } from './admin-building/admin-building.component';
+import { AdminAreaComponent } from './admin-area/admin-area.component';
+
 
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
+    ChartsModule,
     AngularMultiSelectModule,
     AdminRoutingModule,
     DndModule.forRoot(),
     ImageUploadModule.forRoot()
   ],
-  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent ]
+  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent ]
 })
 export class AdminModule { }

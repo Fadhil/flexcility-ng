@@ -4,7 +4,7 @@ import { AdminWorkOrderNewComponent } from './admin-work-order-new/admin-work-or
 import { AdminWorkOrderViewComponent } from './admin-work-order-view/admin-work-order-view.component';
 import { AdminWorkOrderEditComponent } from './admin-work-order-edit/admin-work-order-edit.component';
 import { AdminWorkOrderHomeComponent } from './admin-work-order-home/admin-work-order-home.component';
-
+import { AdminWorkOrderCompletionComponent } from './admin-work-order-completion/admin-work-order-completion.component';
 
 
 const routes: Routes = [
@@ -40,6 +40,13 @@ const routes: Routes = [
         component: AdminWorkOrderEditComponent,
         data: {
           title: 'Edit'
+        }
+      },
+            {
+        path: 'completion',
+        component: AdminWorkOrderCompletionComponent,
+        data: {
+          title: 'Completion'
         }
       }
 

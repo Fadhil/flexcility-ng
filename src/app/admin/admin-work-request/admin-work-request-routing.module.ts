@@ -4,6 +4,7 @@ import { AdminWorkRequestHomeComponent } from './admin-work-request-home/admin-w
 import { AdminWorkRequestNewComponent } from './admin-work-request-new/admin-work-request-new.component';
 import { AdminWorkRequestEditComponent } from './admin-work-request-edit/admin-work-request-edit.component';
 import { AdminWorkRequestViewComponent } from './admin-work-request-view/admin-work-request-view.component';
+import { AdminWorkRequestVerificationComponent } from './admin-work-request-verification/admin-work-request-verification.component';
 
 
 
@@ -40,6 +41,13 @@ const routes: Routes = [
         component: AdminWorkRequestEditComponent,
         data: {
           title: 'Edit'
+        }
+      },
+      {
+        path: 'verification',
+        component: AdminWorkRequestVerificationComponent,
+        data: {
+          title: 'Verfication'
         }
       }
 
