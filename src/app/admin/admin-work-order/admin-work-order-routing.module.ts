@@ -11,23 +11,23 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Work Order'
+      title: ''
     },
     children: [
       {
         path: '',
         component: AdminWorkOrderHomeComponent,
         data: {
-          title: ''
-        }
-      },
-      {
+          title: 'Work Order'
+        },
+        children: [
+          {
         path: 'new',
         component: AdminWorkOrderNewComponent,
         data: {
-          title: 'new'
+          title: 'New'
         }
-      },
+          },
       {
         path: 'view',
         component: AdminWorkOrderViewComponent,
@@ -49,7 +49,8 @@ const routes: Routes = [
           title: 'Completion'
         }
       }
-
+      ]
+      }
      ]
   }
 ];

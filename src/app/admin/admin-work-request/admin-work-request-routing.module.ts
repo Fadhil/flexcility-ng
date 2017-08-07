@@ -12,45 +12,46 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Work request'
+      title: ''
     },
     children: [
       {
         path: '',
         component: AdminWorkRequestHomeComponent,
         data: {
-          title: ''
-        }
-      },
-      {
-        path: 'new',
-        component: AdminWorkRequestNewComponent,
-        data: {
-          title: 'new'
-        }
-      },
-      {
-        path: 'view',
-        component: AdminWorkRequestViewComponent,
-        data: {
-          title: 'View'
-        }
-      },
-      {
-        path: 'edit',
-        component: AdminWorkRequestEditComponent,
-        data: {
-          title: 'Edit'
-        }
-      },
-      {
-        path: 'verification',
-        component: AdminWorkRequestVerificationComponent,
-        data: {
-          title: 'Verfication'
-        }
+          title: 'Work request'
+        },
+        children:[
+                  {
+                    path: 'new',
+                    component: AdminWorkRequestNewComponent,
+                    data: {
+                       title: 'new'
+                      }
+                  },
+                  {
+                    path: 'view',
+                    component: AdminWorkRequestViewComponent,
+                    data: {
+                      title: 'View'
+                    }
+                  },
+                  {
+                    path: 'edit',
+                    component: AdminWorkRequestEditComponent,
+                    data: {
+                     title: 'Edit'
+                    }
+                   },
+                   {
+                    path: 'verification',
+                    component: AdminWorkRequestVerificationComponent,
+                    data: {
+                      title: 'Verfication'
+                    }
+                  }
+        ]
       }
-
      ]
   }
 ];

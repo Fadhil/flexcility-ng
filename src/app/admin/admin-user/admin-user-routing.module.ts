@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminUserNewComponent } from './admin-user-new/admin-user-new.component';
@@ -11,38 +12,39 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'User'
+      title: ''
     },
     children: [
       {
         path: '',
         component: AdminUserHomeComponent,
-        data: {
-          title: ''
-        }
-      },
-      {
-        path: 'new',
-        component: AdminUserNewComponent,
-        data: {
-          title: 'new'
-        }
-      },
-      {
-        path: 'view',
-        component: AdminUserViewComponent,
-        data: {
-          title: 'View'
-        }
-      },
-      {
-        path: 'edit',
-        component: AdminUserEditComponent,
-        data: {
-          title: 'Edit'
+        data:{
+          title: 'user'
+        },
+     children: [
+          {
+            path: 'view',
+            component: AdminUserViewComponent,
+            data: {
+            title: 'view'
+            }
+          },
+          {
+            path: 'new',
+            component: AdminUserNewComponent,
+            data: {
+            title: 'new'
+            }
+          },
+          {
+            path: 'edit',
+            component: AdminUserEditComponent,
+            data: {
+               title: 'Edit'
         }
       }
-
+        ]
+      }
      ]
   }
 ];

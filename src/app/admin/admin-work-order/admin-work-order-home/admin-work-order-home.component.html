@@ -1,5 +1,5 @@
-
-    <div class="col-lg-8">
+<div class="row">
+    <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify"></i><strong> List of Work Order </strong>
@@ -7,13 +7,10 @@
         <div class="card-block">
           <table class="table table-sm">
             <thead>
-              
                 <th>Request</th>
                 <th>Date</th>
                 <th>Requester</th>
                 <th>Priority</th>
-
-              
             </thead>
             <tbody>
               <tr [routerLink]="['/admin/workorder/view']">
@@ -45,3 +42,8 @@
         </div>
       </div>
     </div>
+    <div class="col-lg-6">
+    <router-outlet></router-outlet>
+    <router-outlet name="popup"></router-outlet>
+    </div>
+</div>

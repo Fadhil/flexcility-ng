@@ -1,3 +1,4 @@
+import { AdminUserComponent } from './admin-user.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,8 @@ import { AdminUserViewComponent } from './admin-user-view/admin-user-view.compon
 import { AdminUserEditComponent } from './admin-user-edit/admin-user-edit.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +20,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AdminUserRoutingModule,
     ImageUploadModule.forRoot()
   ],
-  declarations: [AdminUserNewComponent, AdminUserHomeComponent, AdminUserViewComponent, AdminUserEditComponent]
+  declarations: [ AdminUserNewComponent, AdminUserHomeComponent, AdminUserViewComponent, AdminUserEditComponent]
 })
 export class AdminUserModule { }

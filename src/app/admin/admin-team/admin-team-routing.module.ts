@@ -12,37 +12,39 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Team'
+      title: ''
     },
     children: [
       {
         path: '',
         component: AdminTeamHomeComponent,
         data: {
-          title: ''
-        }
-      }, 
-      {
-        path: 'new',
-        component: AdminTeamNewComponent,
-        data: {
-          title: 'New'
-        }
-      },
-      {
-        path: 'view',
-        component: AdminTeamViewComponent,
-        data: {
-          title: 'View'
-        }
-      },
-      {
-        path: 'edit',
-        component: AdminTeamEditComponent,
-        data: {
-          title: 'Edit'
-        }
-      }   
+          title: 'Team'},
+          children:[
+          {
+            path: 'new',
+            component: AdminTeamNewComponent,
+            data: {
+                title: 'New'
+            }
+          },
+          {
+            path: 'view',
+            component: AdminTeamViewComponent,
+            data: {
+              title: 'View'
+            }
+          },
+          {
+            path: 'edit',
+            component: AdminTeamEditComponent,
+            data: {
+            title: 'Edit'
+             }
+          }
+        ]
+      }
+
      ]
   }
 ];

@@ -1,4 +1,5 @@
-    <div class="col-lg-8">
+<div class="row">    
+<div class="col-lg-6">
       <div class="card">
         <div class="card-header">
           <i class="fa fa-align-justify"></i><strong> List of User </strong>
@@ -14,31 +15,31 @@
               
             </thead>
             <tbody>
-              <tr [routerLink]="['/admin/user/view']">
+              <tr [routerLink]="['/admin/user/view']" routerLinkActive="active">
                 <td>Pompeius René</td>
                 <td>2012/01/01</td>
                 <td>Admin</td>
 
               </tr>
-              <tr [routerLink]="['/admin/user/view']">
+              <tr [routerLink]="['/admin/user/view']" routerLinkActive="active">
                 <td>Paĉjo Jadon</td>
                 <td>2012/02/01</td>
                 <td>Technician</td>
  
               </tr>
-              <tr [routerLink]="['/admin/user/view']">
+              <tr [routerLink]="['/admin/user/view']" routerLinkActive="active">
                 <td>Micheal Mercurius</td>
                 <td>2012/02/01</td>
                 <td>Admin</td>
 
               </tr>
-              <tr [routerLink]="['/admin/user/view']">
+              <tr [routerLink]="['/admin/user/view']" routerLinkActive="active">
                 <td>Ganesha Dubhghall</td>
                 <td>2012/03/01</td>
                 <td>Engineer</td>
 
               </tr>
-              <tr [routerLink]="['/admin/user/view']">
+              <tr [routerLink]="['/admin/user/view']" routerLinkActive="active">
                 <td>Hiroto Šimun</td>
                 <td>2012/01/21</td>
                 <td>Technician</td>
@@ -58,3 +59,10 @@
         </div>
       </div>
     </div>
+    <div class="col-lg-6">
+      
+    <router-outlet></router-outlet>
+    <router-outlet name="popup"></router-outlet>
+     
+    </div>
+</div>
