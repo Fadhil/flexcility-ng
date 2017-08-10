@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-sm-4">    
+<div class="col-sm-3">    
 <div class="card">
       <div class="card-header">
         Planned Preventive Maintenance
@@ -7,30 +7,71 @@
       <div class="card-block">
         <div class="chart-wrapper">
           <canvas baseChart class="chart"
-          [data]="doughnutChartData"
-          [labels]="doughnutChartLabels"
-          [chartType]="doughnutChartType"
+          [data]="ppmdoughnutChartData"
+          [labels]="ppmdoughnutChartLabels"
+          [chartType]="ppmdoughnutChartType"
           (chartHover)="chartHovered($event)"
           (chartClick)="chartClicked($event)"></canvas>
         </div>
       </div>
+      <div class="text-center">
+          <h6>Total: 733</h6>
+      </div>
     </div>
  </div>
- <div class="col-sm-4">       
+ <div class="col-sm-3">       
     <div class="card">
       <div class="card-header">
-        Planned Preventive Maintenance
+        Service Contract Maintenance
       </div>
       <div class="card-block">
         <div class="chart-wrapper">
           <canvas baseChart class="chart"
-          [data]="doughnutChartData2"
-          [labels]="doughnutChartLabels2"
-          [chartType]="doughnutChartType2"
+          [data]="scmdoughnutChartData"
+          [labels]="scmdoughnutChartLabels"
+          [chartType]="scmdoughnutChartType"
           (chartHover)="chartHovered($event)"
           (chartClick)="chartClicked($event)"></canvas>
         </div>
       </div>
+      <div class="text-center">
+          <h6>Total: 133</h6>
+      </div>
     </div>
  </div>
+   <div class="col-sm-3">       
+    <div class="card">
+      <div class="card-header">
+        Corrective Maintenance
+      </div>
+      <div class="card-block">
+        <div class="chart-wrapper">
+          <canvas baseChart class="chart"
+          [data]="cmDoughnutChartData"
+          [labels]="cmDoughnutChartLabels"
+          [chartType]="cmDoughnutChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+      <div class="text-center">
+          <h6>Total: 500</h6>
+      </div>
+    </div>
+ </div>
+     <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header">
+          Events<br/>
+          <!--<div class="card-actions">-->
+          <!--<a href="http://www.chartjs.org">-->
+          <!--<small class="text-muted">docs</small>-->
+          <!--</a>-->
+          <!--</div>-->
+        </div>
+        <div class="card-block  event-card text-center">
+          <span><h1 class="event-display">12</h1>Events</span>
+        </div><br/>
+      </div>
+    </div>
 </div>

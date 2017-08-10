@@ -31,6 +31,7 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
     DndModule.forRoot(),
     ImageUploadModule.forRoot()
   ],
+  // tslint:disable-next-line:max-line-length
   declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent ]
 })
 export class AdminModule { }

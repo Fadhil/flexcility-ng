@@ -63,25 +63,32 @@
   <div class="sidebar">
     <nav class="sidebar-nav">
       <ul class="nav">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></a>
         </li>
         <li class="divider"></li>
         <li class="nav-title">
           Work Request
-        </li>
+        </li> -->
         <!--<li class="nav-item">-->
           <!--<a class="nav-link" routerLinkActive="active" [routerLink]="['/service-requisition']"><i class="icon-wrench"></i> Service Requisition </a>-->
         <!--</li>-->
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/work-requests/index']"><i class="icon-eye"></i> WR/WO List </a>
-        </li>
-        <!--<li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>-->
-        <!--<a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="icon-puzzle"></i> Components</a>-->
-        <!--<ul class="nav-dropdown-items">-->
+          <div class="dropdown">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/tech/workorder']"><i class="icon-wrench"></i>
+ Work Order </a>
+          </div>
+        </li>         
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/tech/workrequest']"><i class="fa fa-exclamation-circle"></i>
+ Work Request </a>
+        </li>  
+         <!-- <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>-->
+         <!-- <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="icon-puzzle"></i> Components</a> 
+        <ul class="nav-dropdown-items"> -->
         <!--<li class="nav-item">-->
         <!--<a class="nav-link" routerLinkActive="active" [routerLink]="['/components/buttons']"><i class="icon-puzzle"></i> Buttons</a>-->
-        <!--</li>-->
+        <!--</li>
         <!--<li class="nav-item">-->
         <!--<a class="nav-link" routerLinkActive="active" [routerLink]="['/components/social-buttons']"><i class="icon-puzzle"></i> Social Buttons</a>-->
         <!--</li>-->
@@ -105,7 +112,7 @@
         <!--</li>-->
         <!--</ul>-->
         <!--</li>-->
-        <!--<li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>-->
+        <!-- <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>-->
         <!--<a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="icon-star"></i> Icons</a>-->
         <!--<ul class="nav-dropdown-items">-->
         <!--<li class="nav-item">-->
@@ -121,7 +128,7 @@
         <!--</li>-->
         <!--<li class="nav-item">-->
         <!--<a class="nav-link" routerLinkActive="active" [routerLink]="['/charts']"><i class="icon-pie-chart"></i> Charts</a>-->
-        <!--</li>-->
+        <!--</li> -->
         <!--<li class="divider"></li>-->
         <!--<li class="nav-title">-->
         <!--Extras-->
@@ -142,7 +149,7 @@
         <!--<a class="nav-link" routerLinkActive="active" [routerLink]="['/pages/500']"><i class="icon-star"></i> Error 500</a>-->
         <!--</li>-->
         <!--</ul>-->
-        <!--</li>-->
+        <!--</li>--> 
       </ul>
     </nav>
   </div>

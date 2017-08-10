@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-helpdesk-layout',
+  selector: 'app-dashboard',
   templateUrl: './helpdesk-layout.component.html',
   styleUrls: ['./helpdesk-layout.component.scss']
 })
 export class HelpdeskLayoutComponent implements OnInit {
 
-  constructor() { }
   public disabled = false;
   public status: {isopen: boolean} = {isopen: false};
 
@@ -21,13 +20,13 @@ export class HelpdeskLayoutComponent implements OnInit {
     this.status.isopen = !this.status.isopen;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
 
     let body = document.getElementsByTagName('body')[0];
 
-    body.classList.remove("sidebar-fixed"); //remove the class
+    body.classList.remove("sidebar-hidden"); //remove the class
 
-    body.classList.add("sidebar-hidden"); //add the class
+    body.classList.add("sidebar-fixed"); //add the class
   }
 
 }

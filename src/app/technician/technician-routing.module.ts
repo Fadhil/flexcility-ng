@@ -1,38 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { WorkOrderExecutionComponent } from './work-order-execution/work-order-execution.component';
-import { WorkOrderReportComponent } from './work-order-report/work-order-report.component';
+import { TechWorkRequestComponent } from './tech-work-request/tech-work-request.component';
+import { TechWorkOrderComponent } from './tech-work-order/tech-work-order.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Technician Pages'
+      title: ''
     },
     children: [
       {
-        path: 'dashboard',
-        component: DashboardComponent,
-        data: {
-          title: 'Technician Home'
-        }
+        path: 'workorder',
+        component: TechWorkOrderComponent,
+        loadChildren: './tech-work-order/tech-work-order.module#TechWorkOrderModule'
       },
       {
-        path: 'work-order-execution',
-        component: WorkOrderExecutionComponent,
-        data: {
-          title: 'Technician Home'
-        }
-      },
-      {
-        path: 'work-order-report',
-        component: WorkOrderReportComponent,
-        data: {
-          title: 'Technician Home'
-        }
-      }
+        path: 'workrequest',
+        component: TechWorkRequestComponent,
+        loadChildren: './tech-work-request/tech-work-request.module#TechWorkRequestModule'
+      } 
     ]
   }
 ];

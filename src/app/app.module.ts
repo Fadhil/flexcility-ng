@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -7,11 +8,12 @@ import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
-
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
+
 
 // Routing Module
 import { AppRoutingModule } from './app.routing';
@@ -31,6 +33,9 @@ import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layo
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { EngineerLayoutComponent } from './layouts/engineer-layout/engineer-layout.component';
+import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
+
 
 
 @NgModule({
@@ -45,7 +50,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     ChartsModule,
     ImageUploadModule.forRoot(),
     FormsModule,
-    HttpModule
+    HttpModule,
+
   ],
   declarations: [
     AppComponent,
@@ -60,7 +66,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     TechLayoutComponent,
     HelpdeskLayoutComponent,
     AdminLayoutComponent,
-  ],
+    EngineerLayoutComponent,
+    VendorLayoutComponent
+
+],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy,

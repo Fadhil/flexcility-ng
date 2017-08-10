@@ -13,6 +13,12 @@
           </div>
           <br/>
           <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Status</strong></label>
+            <div class="col-md-9">
+              <span class="badge badge-info">NEW</span>
+            </div>
+          </div>
+          <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Request ID</strong></label>
             <div class="col-md-9">
               WR-101
@@ -31,9 +37,15 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Building</strong></label>
             <div class="col-md-9">
               Block B
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Area</strong></label>
+            <div class="col-md-9">
+             Area B
             </div>
           </div>
           <div class="form-group row">
@@ -61,7 +73,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="dangerModal2.hide()">Close</button>
-        <button type="button" class="btn btn-primary" [routerLink]="['/admin/site/']" >Delete</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/admin/workrequest/']" >Delete</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

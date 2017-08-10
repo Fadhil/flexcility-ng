@@ -1,16 +1,44 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImageUploadModule } from 'angular2-image-upload';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HelpdeskDashboardComponent } from './helpdesk-dashboard/helpdesk-dashboard.component';
 import {HelpdeskRoutingModule} from "./helpdesk-routing.module";
-import { WorkRequestsComponent } from './work-requests/work-requests.component';
+import { HelpdeskWorkRequestHomeComponent } from './helpdesk-work-request-home/helpdesk-work-request-home.component';
+import { HelpdeskWorkRequestViewComponent } from './helpdesk-work-request-view/helpdesk-work-request-view.component';
+import { HelpdeskWorkRequestEditComponent } from './helpdesk-work-request-edit/helpdesk-work-request-edit.component';
+import { HelpdeskWorkRequestNewComponent } from './helpdesk-work-request-new/helpdesk-work-request-new.component';
+import { HelpdeskWorkRequestVerificationComponent } from './helpdesk-work-request-verification/helpdesk-work-request-verification.component';
+import { HelpdeskWorkOrderHomeComponent } from './helpdesk-work-order-home/helpdesk-work-order-home.component';
+import { HelpdeskWorkOrderEditComponent } from './helpdesk-work-order-edit/helpdesk-work-order-edit.component';
+import { HelpdeskWorkOrderNewComponent } from './helpdesk-work-order-new/helpdesk-work-order-new.component';
+import { HelpdeskWorkOrderViewComponent } from './helpdesk-work-order-view/helpdesk-work-order-view.component';
+import { HelpdeskWorkOrderReportComponent } from './helpdesk-work-order-report/helpdesk-work-order-report.component';
+
 
 @NgModule({
   imports: [
+  	FormsModule,
+  	ReactiveFormsModule,
     CommonModule,
     HelpdeskRoutingModule,
     ModalModule.forRoot(),
+    ImageUploadModule.forRoot()
   ],
-  declarations: [HelpdeskDashboardComponent, WorkRequestsComponent]
+  declarations: [
+
+  HelpdeskDashboardComponent,
+  HelpdeskWorkRequestHomeComponent,
+  HelpdeskWorkRequestViewComponent,
+  HelpdeskWorkRequestEditComponent,
+  HelpdeskWorkRequestNewComponent,
+  HelpdeskWorkRequestVerificationComponent,
+  HelpdeskWorkOrderHomeComponent,
+  HelpdeskWorkOrderEditComponent,
+  HelpdeskWorkOrderNewComponent,
+  HelpdeskWorkOrderViewComponent,
+  HelpdeskWorkOrderReportComponent
+]
 })
 export class HelpdeskModule { }

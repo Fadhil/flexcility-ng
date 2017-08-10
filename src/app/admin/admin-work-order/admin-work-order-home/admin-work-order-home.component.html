@@ -9,21 +9,21 @@
             <thead>
                 <th>Request</th>
                 <th>Date</th>
-                <th>Requester</th>
+                <th>Status</th>
                 <th>Priority</th>
             </thead>
             <tbody>
               <tr [routerLink]="['/admin/workorder/view']">
                 <td>Pintu Rosak</td>
                 <td>2012/01/01</td>
-                <td>Celine</td>
+                <td><span class="badge badge-warning">IN PROGRESS</span></td>
                 <td><span class="badge badge-danger">High</span></td>
 
               </tr>
               <tr [routerLink]="['/admin/workorder/view']">
                 <td>Tandas Tersumbat</td>
                 <td>2012/02/01</td>
-                <td>Mark</td>
+                <td><span class="badge badge-success">CLOSED</span></td>
                 <td><span class="badge badge-primary">Normal</span></td>
  
               </tr>
@@ -46,4 +46,5 @@
     <router-outlet></router-outlet>
     <router-outlet name="popup"></router-outlet>
     </div>
+
 </div>

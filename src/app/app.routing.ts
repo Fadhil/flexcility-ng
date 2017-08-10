@@ -9,6 +9,8 @@ import { ClientLayoutComponent } from './layouts/client-layout/client-layout.com
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { EngineerLayoutComponent } from './layouts/engineer-layout/engineer-layout.component';
+import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
 
 export const routes: Routes = [
   {
@@ -140,7 +142,36 @@ export const routes: Routes = [
         loadChildren: './pages/pages.module#PagesModule'
       }
     ]
+  },
+  {
+    path: 'engineer',
+    component: EngineerLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+
+      {
+        path: '',
+        loadChildren: './engineer/engineer.module#EngineerModule'
+      }
+    ]
+  },
+  {
+    path: 'vendor',
+    component: VendorLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+
+      {
+        path: '',
+        loadChildren: './vendor/vendor.module#VendorModule'
+      }
+    ]
   }
+
 ];
 
 @NgModule({

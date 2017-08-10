@@ -1,18 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import {TechnicianRoutingModule} from "./technician-routing.module";
-import { WorkOrderExecutionComponent } from './work-order-execution/work-order-execution.component';
-import { WorkOrderReportComponent } from './work-order-report/work-order-report.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { DndModule} from 'ng2-dnd';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { TechnicianRoutingModule } from './technician-routing.module';
+import { ImageUploadModule } from 'angular2-image-upload';
+import { TechWorkRequestComponent } from './tech-work-request/tech-work-request.component';
+import { TechWorkOrderComponent } from './tech-work-order/tech-work-order.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ChartsModule,
+    AngularMultiSelectModule,
     TechnicianRoutingModule,
-    ModalModule.forRoot()
-
+    DndModule.forRoot(),
+    ImageUploadModule.forRoot()
   ],
-  declarations: [DashboardComponent, WorkOrderExecutionComponent, WorkOrderReportComponent]
+  // tslint:disable-next-line:max-line-length
+  declarations: [TechWorkRequestComponent, TechWorkOrderComponent]
 })
 export class TechnicianModule { }

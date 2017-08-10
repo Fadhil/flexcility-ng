@@ -19,11 +19,7 @@ const routes: Routes = [
       title: ''
     },
     children: [
-      // {
-      //   path: 'organization',
-      //   component: AdminOrganizationComponent,
-      //   loadChildren: './admin-organization/admin-organization.module#AdminOrganizationModule'
-      // },
+
       {
         path: 'site',
         component: AdminSiteComponent,
