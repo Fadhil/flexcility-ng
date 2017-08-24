@@ -20,6 +20,7 @@ import { EngWorkRequestEditComponent } from './eng-work-request-edit/eng-work-re
 import { EngWorkOrderCompletionComponent } from './eng-work-order-completion/eng-work-order-completion.component';
 import { EngWorkOrderReportComponent } from './eng-work-order-report/eng-work-order-report.component';
 import { EngWorkRequestVerificationComponent } from './eng-work-request-verification/eng-work-request-verification.component';
+import { EngWorkScheduleComponent } from './eng-work-schedule/eng-work-schedule.component';
 
 
 
@@ -49,6 +50,7 @@ import { EngWorkRequestVerificationComponent } from './eng-work-request-verifica
   EngWorkOrderCompletionComponent, 
   EngWorkOrderReportComponent, 
   EngWorkRequestVerificationComponent, 
-  ]
+  EngWorkScheduleComponent
+]
 })
 export class EngineerModule { }

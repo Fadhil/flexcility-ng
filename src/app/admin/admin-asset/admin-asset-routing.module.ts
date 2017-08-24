@@ -12,44 +12,48 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Asset'
+      title: ''
     },
     children: [
         {
         path: '',
         component: AdminAssetHomeComponent,
         data: {
-          title: ''
-        }
-      }, 
-      {
-        path: 'new',
-        component: AdminAssetNewComponent,
-        data: {
-          title: 'New'
-        }
-      },
-      {
-        path: 'import',
-        component: AdminAssetImportComponent,
-        data: {
-          title: 'Import'
-        }
-      },
-      {
-        path: 'view',
-        component: AdminAssetViewComponent,
-        data: {
-          title: 'View'
-        }
-      },
-      {
-        path: 'edit',
-        component: AdminAssetEditComponent,
-        data: {
-          title: 'Edit'
-        }
-      }     ]
+          title: 'Asset'
+        },
+        children:[
+          {
+            path: 'new',
+            component: AdminAssetNewComponent,
+            data: {
+              title: 'New'
+            }
+          },
+          {
+            path: 'import',
+            component: AdminAssetImportComponent,
+            data: {
+              title: 'Import'
+            }
+          },
+          {
+            path: 'view',
+            component: AdminAssetViewComponent,
+            data: {
+              title: 'View'
+            }
+          },
+          {
+            path: 'edit',
+            component: AdminAssetEditComponent,
+            data: {
+              title: 'Edit'
+            }
+          }
+        ]
+      }
+
+    ]
   }
 ];
 

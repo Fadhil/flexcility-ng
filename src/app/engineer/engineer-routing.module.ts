@@ -1,3 +1,4 @@
+import { EngWorkScheduleComponent } from './eng-work-schedule/eng-work-schedule.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EngWorkOrderHomeComponent } from './eng-work-order-home/eng-work-order-home.component';
@@ -23,9 +24,16 @@ const routes: Routes = [
 
       {
         path: 'dashboard',
-        component:EngDashboardComponent,
+        component:  EngDashboardComponent,
         data: {
         title: 'Dashboard'
+        }
+      },
+      {
+        path: 'schedule',
+        component:  EngWorkScheduleComponent,
+        data: {
+        title: 'Schedule'
         }
       },
       {
