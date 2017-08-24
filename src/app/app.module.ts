@@ -1,18 +1,26 @@
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { UsersService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
+import { LoggingService } from './logging.service';
+import { firebaseConfig } from './../environments/firebase.config';
+import { AngularFireModule } from 'angularfire2/index';
+
+
+import { HttpModule } from '@angular/http';
+import { AllDataService } from './all-data';
+
 
 
 // Routing Module
@@ -35,6 +43,7 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { EngineerLayoutComponent } from './layouts/engineer-layout/engineer-layout.component';
 import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
+import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 
 
 
@@ -44,13 +53,15 @@ import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.com
     AngularMultiSelectModule,
     ReactiveFormsModule,
     MultiselectDropdownModule,
-    AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
     ImageUploadModule.forRoot(),
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(AllDataService),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig)
 
   ],
   declarations: [
@@ -67,8 +78,8 @@ import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.com
     HelpdeskLayoutComponent,
     AdminLayoutComponent,
     EngineerLayoutComponent,
-    VendorLayoutComponent
-
+    VendorLayoutComponent,
+    ManagerLayoutComponent
 ],
   providers: [{
     provide: LocationStrategy,
@@ -78,7 +89,9 @@ import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.com
     AuthGuard,
     AlertService,
     AuthenticationService,
-    UserService
+    LoggingService,
+    UsersService
+
   ],
   bootstrap: [ AppComponent ]
 })

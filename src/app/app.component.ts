@@ -1,5 +1,11 @@
 import { Component, OnInit} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { initializeApp, database } from 'firebase';
+import { AngularFireModule } from 'angularfire2/index';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from './../environments/firebase.config';
+
 
 @Component({
   // tslint:disable-next-line
@@ -7,7 +13,12 @@ import { Router, NavigationEnd } from '@angular/router';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, db: AngularFireDatabase) {
+    const user$: FirebaseListObservable<any> = db.list('userdata');
+    const usr$ = db.object('userdata/2');
+    usr$.subscribe(console.log);
+  }
+
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {
@@ -25,4 +36,6 @@ export class AppComponent implements OnInit {
       }, 16); // how fast to scroll (this equals roughly 60 fps)
     });
   }
+
 }
+

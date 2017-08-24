@@ -1,3 +1,4 @@
+<div *ngIf="user" >
     <div class="col-sm-12">
       <div class="card">
         <div class="card-header">
@@ -13,47 +14,48 @@
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_type"><strong> worker ID</strong></label>
             <div class="col-md-9">
-              FSE0122
+              {{user._id}}
             </div>
           </div>          
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Email</strong></label>
             <div class="col-md-9">
-              admin@flexcility.com
+              {{user.email}}
             </div>
           </div>
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_type"><strong> Password</strong></label>
             <div class="col-md-9">
-              ********
+              {{user.password}}
             </div>
           </div>          
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Department</strong></label>
             <div class="col-md-9">
-              Human Resource
+              {{user.department}}
             </div>
           </div>
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>No.phone</strong></label>
             <div class="col-md-9">
-              0133422091
+              {{user.no_phone}}
             </div>
           </div>          
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_type"><strong>Username</strong></label>
             <div class="col-md-9">
-              Administrator
+              {{user.username}}
             </div>
           </div>
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_type"><strong> User Type</strong></label>
             <div class="col-md-9">
-              Admin
+              {{user.role}}
             </div>
           </div>        </div>
       </div>
     </div><!--/.col-->
+</div>
 
 <div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-danger" role="document">

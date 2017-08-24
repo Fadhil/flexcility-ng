@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './shared/guard/auth.guard';
@@ -11,6 +12,7 @@ import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layo
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { EngineerLayoutComponent } from './layouts/engineer-layout/engineer-layout.component';
 import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
+import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 
 export const routes: Routes = [
   {
@@ -168,6 +170,19 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: './vendor/vendor.module#VendorModule'
+      }
+    ]
+  },
+  {
+    path: 'management',
+    component: ManagerLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './management/management.module#ManagementModule'
       }
     ]
   }

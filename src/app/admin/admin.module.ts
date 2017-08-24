@@ -24,6 +24,7 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
   imports: [
     CommonModule,
     FormsModule,
+    HttpModule,
     ReactiveFormsModule,
     ChartsModule,
     AngularMultiSelectModule,
