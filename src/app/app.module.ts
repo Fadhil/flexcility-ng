@@ -28,6 +28,7 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { AlertService, AuthenticationService, UserService } from './shared/services/index';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   imports: [
@@ -52,6 +53,7 @@ import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layo
     AlertComponent,
     TechLayoutComponent,
     HelpdeskLayoutComponent,
+    AdminComponent,
   ],
   providers: [{
     provide: LocationStrategy,
