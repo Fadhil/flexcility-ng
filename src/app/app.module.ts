@@ -1,3 +1,4 @@
+import { RegistrationService } from './shared/services/user/registration.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -63,7 +64,8 @@ import { AdminComponent } from './admin/admin.component';
     AuthGuard,
     AlertService,
     AuthenticationService,
-    UserService
+    UserService, 
+    RegistrationService
   ],
   bootstrap: [ AppComponent ]
 })
