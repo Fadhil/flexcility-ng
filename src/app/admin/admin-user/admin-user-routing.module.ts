@@ -23,7 +23,7 @@ const routes: Routes = [
         },
      children: [
           {
-            path: 'view/:id',
+            path: 'view',
             component: AdminUserViewComponent,
             data: {
             title: 'view'

@@ -1,6 +1,5 @@
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { UsersService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -89,8 +88,7 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
     AuthGuard,
     AlertService,
     AuthenticationService,
-    LoggingService,
-    UsersService
+    LoggingService
 
   ],
   bootstrap: [ AppComponent ]
