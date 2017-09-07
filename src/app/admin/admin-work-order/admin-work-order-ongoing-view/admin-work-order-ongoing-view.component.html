@@ -3,7 +3,7 @@
       <div class="card">
         <div class="card-header">
           <strong>Work Order Title</strong><i class="fa fa-trash pull-right" style="font-size:22px" data-toggle="modal" (click)="dangerModal2.show()"></i>
-          <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/workorder/edit']"></i>
+          <i class="fa fa-pencil-square-o pull-right" style="font-size:25px" [routerLink]="['/admin/workorder/ongoing/edit']"></i><i class="fa fa-check pull-right" style="font-size:23px" [routerLink]="['/admin/workorder/ongoing/completion']"></i>
         </div>
         <div class="card-block">
           <div class="row" align="center">
@@ -12,12 +12,6 @@
             </div>
           </div>
           <br/>
-          <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>Priority</strong></label>
-            <div class="col-md-9">
-              <span class="badge badge-danger">High</span>
-            </div>
-          </div> 
           <div class="form-group row">
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Status</strong></label>
             <div class="col-md-9">
@@ -53,17 +47,17 @@
             <div class="col-md-9">
               Area B
             </div>
-          </div>  
+          </div>
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>Date</strong></label>
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>verify by</strong></label>
             <div class="col-md-9">
-              2012/01/01
+              <a href="http://localhost:4200/#/admin/user/view" >Rahman Taib</a> 
             </div>
           </div>  
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>Time</strong></label>
+            <label class="col-md-3 form-control-label" for="job_trait"><strong>Priority</strong></label>
             <div class="col-md-9">
-              9.40 AM
+              <span class="badge badge-danger">High</span>
             </div>
           </div> 
           <div class="form-group row">
@@ -82,12 +76,6 @@
             <label class="col-md-3 form-control-label" for="job_trait"><strong>Person In charge</strong></label>
             <div class="col-md-9">
               <a href="http://localhost:4200/#/admin/user/view" >Rohamnuddin</a>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="job_trait"><strong>verify by</strong></label>
-            <div class="col-md-9">
-              <a href="http://localhost:4200/#/admin/user/view" >Rahman Taib</a> 
             </div>
           </div>
       </div>
@@ -109,7 +97,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="dangerModal2.hide()">Close</button>
-        <button type="button" class="btn btn-primary" [routerLink]="['/admin/workorder']" >Delete</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/admin/workorder/ongoing/']" >Delete</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
