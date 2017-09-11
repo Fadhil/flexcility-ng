@@ -11,6 +11,7 @@ import { AdminWorkOrderComponent } from './admin-work-order/admin-work-order.com
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminBuildingComponent } from './admin-building/admin-building.component';
 import { AdminAreaComponent } from './admin-area/admin-area.component';
+import { AdminDashboardWoWrComponent } from './admin-dashboard-wo-wr/admin-dashboard-wo-wr.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,13 @@ const routes: Routes = [
         component: AdminDashboardComponent,
         data: {
         title: 'Dashboard'
+          }   
+      },
+      {
+        path: 'dashboard2',
+        component: AdminDashboardWoWrComponent,
+        data: {
+        title: 'Dashboard Work Order and Work Request'
           }   
       },
       {

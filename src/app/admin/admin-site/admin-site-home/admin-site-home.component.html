@@ -4,12 +4,16 @@
       <div class="card" style="background-color:white;">
         <div class="card-block">
             <div class="col-sm-12">
-            <table style="width:50%" >
+            <table style="width:70%" align="center" >
             <tr>
             <td width="10%"><i  class="fa fa-plus-circle" style="font-size:25px;" [routerLink]="['/admin/site/new']"></i></td>
-            <td width="80%"><input type="text" class="form-control" id="org_name" placeholder="Search Site">
+            <td width="80%"><div class="input-group">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+              </span>
+              <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Search asset">
+              </div>
             </td>
-            <td width="10%"><button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/']">Search</button></td>
             </tr>
             </table>
 

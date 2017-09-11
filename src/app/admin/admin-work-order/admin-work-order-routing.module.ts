@@ -17,7 +17,6 @@ import { AdminWorkOrderOngoingViewComponent } from './admin-work-order-ongoing-v
 import { AdminWorkOrderOngoingEditComponent } from './admin-work-order-ongoing-edit/admin-work-order-ongoing-edit.component';
 import { AdminWorkOrderOngoingCompletionComponent } from './admin-work-order-ongoing-completion/admin-work-order-ongoing-completion.component';
 import { AdminWorkOrderClosedViewComponent } from './admin-work-order-closed-view/admin-work-order-closed-view.component';
-import { AdminWorkOrderClosedEditComponent } from './admin-work-order-closed-edit/admin-work-order-closed-edit.component';
 import { AdminWorkOrderClosedCompletionComponent } from './admin-work-order-closed-completion/admin-work-order-closed-completion.component';
 import { AdminWorkOrderQuotationCompletionComponent } from './admin-work-order-quotation-completion/admin-work-order-quotation-completion.component';
 import { AdminWorkOrderQuotationEditComponent } from './admin-work-order-quotation-edit/admin-work-order-quotation-edit.component';
@@ -28,7 +27,7 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: ''
+      title: 'Work Order'
     },
     children: [
       {
@@ -48,7 +47,7 @@ const routes: Routes = [
           path: 'view',
           component: AdminWorkOrderOpenViewComponent,
           data: {
-          title: 'view'
+          title: 'View'
         }
         },
         {
@@ -112,13 +111,6 @@ const routes: Routes = [
           }
         },
         {
-          path: 'edit',
-          component: AdminWorkOrderClosedEditComponent,
-          data: {
-          title: 'Edit'
-          }
-        },
-        {
           path: 'completion',
           component: AdminWorkOrderClosedCompletionComponent,
           data: {
@@ -161,7 +153,7 @@ const routes: Routes = [
         path: '',
         component: AdminWorkOrderHomeComponent,
         data: {
-          title: 'Work Order'
+          title: ''
         },
         children: [
           {

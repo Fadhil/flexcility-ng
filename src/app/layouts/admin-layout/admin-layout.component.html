@@ -58,10 +58,17 @@
   <div class="sidebar">
     <nav class="sidebar-nav">
       <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/dashboard']"><i class="fa fa-line-chart"></i>
- Dashboard <span class="badge badge-info">NEW</span></a>
-        </li>
+        <li class="nav-item nav-dropdown" routerLinkActive="active" appNavDropdown >
+          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle ><i class="fa fa-line-chart" ></i> Dashboard</a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/dashboard']"><i class="fa fa-angle-right"></i> Performance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/dashboard2']"><i class="fa fa-angle-right"></i> WO/WR</a>
+            </li>
+          </ul>
+        </li>  
         <li class="divider"></li>
 <!--         <li class="nav-title">
           Work Request
@@ -76,7 +83,7 @@
           <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/organization']"><i class="fa fa-building"></i> Organization </a>
         </li> -->
 
-        <li class="nav-item nav-dropdown" routerLinkActive="active" appNavDropdown >
+        <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
           <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/admin/workorder']"><i class="icon-wrench" ></i> Work Order</a>
           <ul class="nav-dropdown-items">
             <li class="nav-item">
@@ -93,9 +100,22 @@
             </li>
           </ul>
         </li>         
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/workrequest']"><i class="fa fa-exclamation-circle"></i>
- Work Request </a>
+        <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
+          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/admin/workrequest']"><i class="fa fa-exclamation-circle" ></i> Work Request</a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/workrequest/news']"><i class="fa fa-angle-right"></i> New</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/workrequest/open']"><i class="fa fa-angle-right"></i> Open</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/workrequest/verified']"><i class="fa fa-angle-right"></i> Verified</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/workrequest/cancelled']"><i class="fa fa-angle-right"></i> Cancelled</a>
+            </li>
+          </ul>
         </li>         
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/site']"><i class="fa fa-globe"></i> Site </a>

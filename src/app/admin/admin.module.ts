@@ -17,6 +17,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { AdminBuildingComponent } from './admin-building/admin-building.component';
 import { AdminAreaComponent } from './admin-area/admin-area.component';
+import { AdminDashboardWoWrComponent } from './admin-dashboard-wo-wr/admin-dashboard-wo-wr.component';
 
 
 
@@ -33,6 +34,6 @@ import { AdminAreaComponent } from './admin-area/admin-area.component';
     ImageUploadModule.forRoot()
   ],
   // tslint:disable-next-line:max-line-length
-  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent ]
+  declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent, AdminDashboardWoWrComponent ]
 })
 export class AdminModule { }

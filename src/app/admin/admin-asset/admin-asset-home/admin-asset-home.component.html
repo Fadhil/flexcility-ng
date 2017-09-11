@@ -3,11 +3,16 @@
       <div class="card" style="background-color:white;">
         <div class="card-block">
             <div class="col-sm-12">
-            <table style="width:60%">
+            <table style="width:70%" align="center">
             <tr style="background-color:white;">
             <td width="10%"><i class="fa fa-file-excel-o" style="font-size:23px;" [routerLink]="['/admin/asset/import']"></i></td>
-            <td width="70%"><input type="text" class="form-control" id="org_name" placeholder="Search Asset"></td>
-            <td width="10%"><button type="submit" class="btn btn-sm btn-primary pull-right" [routerLink]="['/']">Search</button></td>
+            <td width="90%">                
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+              </span>
+              <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Search asset">
+              </div></td>
             </tr>
             </table>
             </div>

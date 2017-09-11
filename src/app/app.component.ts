@@ -1,10 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { initializeApp, database } from 'firebase';
-import { AngularFireModule } from 'angularfire2/index';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { firebaseConfig } from './../environments/firebase.config';
 
 
 @Component({
@@ -13,10 +8,7 @@ import { firebaseConfig } from './../environments/firebase.config';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router, db: AngularFireDatabase) {
-    const user$: FirebaseListObservable<any> = db.list('userdata');
-    const usr$ = db.object('userdata/2');
-    usr$.subscribe(console.log);
+  constructor(private router: Router) {
   }
 
 

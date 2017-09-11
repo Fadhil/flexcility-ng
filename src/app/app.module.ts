@@ -13,10 +13,6 @@ import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 import { LoggingService } from './logging.service';
-import { firebaseConfig } from './../environments/firebase.config';
-import { AngularFireModule } from 'angularfire2/index';
-
-
 import { HttpModule } from '@angular/http';
 import { AllDataService } from './all-data';
 
@@ -60,7 +56,7 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
     HttpModule,
     InMemoryWebApiModule.forRoot(AllDataService),
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+   
 
   ],
   declarations: [

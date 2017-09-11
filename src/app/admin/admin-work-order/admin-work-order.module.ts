@@ -21,7 +21,6 @@ import { AdminWorkOrderOngoingViewComponent } from './admin-work-order-ongoing-v
 import { AdminWorkOrderOngoingEditComponent } from './admin-work-order-ongoing-edit/admin-work-order-ongoing-edit.component';
 import { AdminWorkOrderOngoingCompletionComponent } from './admin-work-order-ongoing-completion/admin-work-order-ongoing-completion.component';
 import { AdminWorkOrderClosedViewComponent } from './admin-work-order-closed-view/admin-work-order-closed-view.component';
-import { AdminWorkOrderClosedEditComponent } from './admin-work-order-closed-edit/admin-work-order-closed-edit.component';
 import { AdminWorkOrderClosedCompletionComponent } from './admin-work-order-closed-completion/admin-work-order-closed-completion.component';
 import { AdminWorkOrderQuotationCompletionComponent } from './admin-work-order-quotation-completion/admin-work-order-quotation-completion.component';
 import { AdminWorkOrderQuotationEditComponent } from './admin-work-order-quotation-edit/admin-work-order-quotation-edit.component';
@@ -38,6 +37,6 @@ import { AdminWorkOrderQuotationViewComponent } from './admin-work-order-quotati
     ImageUploadModule.forRoot()
   ],
   declarations: [AdminWorkOrderHomeComponent, AdminWorkOrderNewComponent, AdminWorkOrderViewComponent, AdminWorkOrderEditComponent
-, AdminWorkOrderReportComponent, AdminWorkOrderOpenComponent, AdminWorkOrderOngoingComponent, AdminWorkOrderClosedComponent, AdminWorkOrderQuotationComponent, AdminWorkOrderOpenViewComponent, AdminWorkOrderOpenEditComponent, AdminWorkOrderOpenAssessmentComponent, AdminWorkOrderOngoingViewComponent, AdminWorkOrderOngoingEditComponent, AdminWorkOrderOngoingCompletionComponent, AdminWorkOrderClosedViewComponent, AdminWorkOrderClosedEditComponent, AdminWorkOrderClosedCompletionComponent, AdminWorkOrderQuotationCompletionComponent, AdminWorkOrderQuotationEditComponent, AdminWorkOrderQuotationViewComponent]
+, AdminWorkOrderReportComponent, AdminWorkOrderOpenComponent, AdminWorkOrderOngoingComponent, AdminWorkOrderClosedComponent, AdminWorkOrderQuotationComponent, AdminWorkOrderOpenViewComponent, AdminWorkOrderOpenEditComponent, AdminWorkOrderOpenAssessmentComponent, AdminWorkOrderOngoingViewComponent, AdminWorkOrderOngoingEditComponent, AdminWorkOrderOngoingCompletionComponent, AdminWorkOrderClosedViewComponent, AdminWorkOrderClosedCompletionComponent, AdminWorkOrderQuotationCompletionComponent, AdminWorkOrderQuotationEditComponent, AdminWorkOrderQuotationViewComponent]
 })
 export class AdminWorkOrderModule { }
