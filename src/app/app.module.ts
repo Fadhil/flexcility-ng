@@ -18,6 +18,7 @@ import { AllDataService } from './all-data';
 
 
 
+
 // Routing Module
 import { AppRoutingModule } from './app.routing';
 
@@ -55,7 +56,7 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(AllDataService),
-    AppRoutingModule,
+    AppRoutingModule
    
 
   ],
@@ -75,6 +76,7 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
     EngineerLayoutComponent,
     VendorLayoutComponent,
     ManagerLayoutComponent
+
 ],
   providers: [{
     provide: LocationStrategy,

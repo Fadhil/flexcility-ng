@@ -58,8 +58,8 @@
   <div class="sidebar">
     <nav class="sidebar-nav">
       <ul class="nav">
-        <li class="nav-item nav-dropdown" routerLinkActive="active" appNavDropdown >
-          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle ><i class="fa fa-line-chart" ></i> Dashboard</a>
+        <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
+          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/admin/dashboard']" ><i class="fa fa-line-chart" ></i> Dashboard</a>
           <ul class="nav-dropdown-items">
             <li class="nav-item">
               <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/dashboard']"><i class="fa fa-angle-right"></i> Performance</a>
@@ -70,19 +70,6 @@
           </ul>
         </li>  
         <li class="divider"></li>
-<!--         <li class="nav-title">
-          Work Request
-        </li> -->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link" routerLinkActive="active" [routerLink]="['/service-requisition']"><i class="icon-wrench"></i> Service Requisition </a>-->
-        <!--</li>-->
-<!--         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/work-requests/index']"><i class="icon-eye"></i> WR/WO List </a>
-        </li> -->
-<!--         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/organization']"><i class="fa fa-building"></i> Organization </a>
-        </li> -->
-
         <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
           <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/admin/workorder']"><i class="icon-wrench" ></i> Work Order</a>
           <ul class="nav-dropdown-items">
@@ -116,7 +103,18 @@
               <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/workrequest/cancelled']"><i class="fa fa-angle-right"></i> Cancelled</a>
             </li>
           </ul>
-        </li>         
+        </li>
+        <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
+          <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/admin/schedule/calendar']" ><i class="fa fa-calendar" ></i> Work Schedule</a>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/schedule/calendar']"><i class="fa fa-angle-right"></i> Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/schedule/list']"><i class="fa fa-angle-right"></i> List</a>
+            </li>
+          </ul>
+        </li>          
         <li class="nav-item">
           <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/site']"><i class="fa fa-globe"></i> Site </a>
         </li>        

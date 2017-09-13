@@ -12,6 +12,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminBuildingComponent } from './admin-building/admin-building.component';
 import { AdminAreaComponent } from './admin-area/admin-area.component';
 import { AdminDashboardWoWrComponent } from './admin-dashboard-wo-wr/admin-dashboard-wo-wr.component';
+import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-schedule.component';
+
 
 const routes: Routes = [
   {
@@ -50,6 +52,11 @@ const routes: Routes = [
         path: 'workrequest',
         component: AdminWorkRequestComponent,
         loadChildren: './admin-work-request/admin-work-request.module#AdminWorkRequestModule'
+      },
+      {
+        path: 'schedule',
+        component: AdminWorkScheduleComponent,
+        loadChildren: './admin-work-schedule/admin-work-schedule.module#AdminWorkScheduleModule'
       },
       {
         path: 'dashboard',

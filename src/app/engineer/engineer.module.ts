@@ -21,7 +21,7 @@ import { EngWorkOrderCompletionComponent } from './eng-work-order-completion/eng
 import { EngWorkOrderReportComponent } from './eng-work-order-report/eng-work-order-report.component';
 import { EngWorkRequestVerificationComponent } from './eng-work-request-verification/eng-work-request-verification.component';
 import { EngWorkScheduleComponent } from './eng-work-schedule/eng-work-schedule.component';
-
+import {CalendarModule} from "ap-angular2-fullcalendar";
 
 
 @NgModule({
@@ -34,7 +34,8 @@ import { EngWorkScheduleComponent } from './eng-work-schedule/eng-work-schedule.
     AngularMultiSelectModule,
     EngineerRoutingModule,
     DndModule.forRoot(),
-    ImageUploadModule.forRoot()
+    ImageUploadModule.forRoot(),
+    CalendarModule
   ],
 
   declarations: [
