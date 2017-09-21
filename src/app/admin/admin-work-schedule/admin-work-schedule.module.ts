@@ -8,6 +8,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AdminWsCalendarComponent } from './admin-ws-calendar/admin-ws-calendar.component';
 import { AdminWsListComponent } from './admin-ws-list/admin-ws-list.component';
 import {CalendarModule} from "ap-angular2-fullcalendar";
+import { AdminWsNewComponent } from './admin-ws-new/admin-ws-new.component';
+import { AdminWsViewComponent } from './admin-ws-view/admin-ws-view.component';
+import { AdminWsEditComponent } from './admin-ws-edit/admin-ws-edit.component';
 
 
 
@@ -19,8 +22,13 @@ import {CalendarModule} from "ap-angular2-fullcalendar";
     ModalModule.forRoot(),
     AdminWorkScheduleRoutingModule,
     CalendarModule,
-    ImageUploadModule.forRoot()
+    ImageUploadModule.forRoot(),
+
   ],
-  declarations: [AdminWsCalendarComponent, AdminWsListComponent]
+  declarations: [AdminWsCalendarComponent, AdminWsListComponent,
+    AdminWsNewComponent,
+    AdminWsViewComponent,
+    AdminWsEditComponent
+]
 })
 export class AdminWorkScheduleModule { }

@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { EngWorkScheduleComponent } from './eng-work-schedule.component';
+import { EngWoQuotationViewComponent } from './eng-wo-quotation-view.component';
 
-describe('EngWorkScheduleComponent', () => {
-  let component: EngWorkScheduleComponent;
-  let fixture: ComponentFixture<EngWorkScheduleComponent>;
+describe('EngWoQuotationViewComponent', () => {
+  let component: EngWoQuotationViewComponent;
+  let fixture: ComponentFixture<EngWoQuotationViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EngWorkScheduleComponent ]
+      declarations: [ EngWoQuotationViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EngWorkScheduleComponent);
+    fixture = TestBed.createComponent(EngWoQuotationViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

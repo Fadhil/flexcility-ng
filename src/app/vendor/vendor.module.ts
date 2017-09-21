@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DndModule} from 'ng2-dnd';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { VendorRoutingModule } from './vendor-routing.module';
@@ -25,7 +24,6 @@ import { VendorWorkRequestQuotationComponent } from './vendor-work-request-quota
     ChartsModule,
     AngularMultiSelectModule,
     VendorRoutingModule,
-    DndModule.forRoot(),
     ImageUploadModule.forRoot(),
     ModalModule.forRoot(),
   ],

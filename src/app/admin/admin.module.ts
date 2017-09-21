@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DndModule} from 'ng2-dnd';
 import { AdminRoutingModule } from './admin-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { AdminOrganizationComponent } from './admin-organization/admin-organization.component';
@@ -30,7 +29,6 @@ import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-sch
     ChartsModule,
     AngularMultiSelectModule,
     AdminRoutingModule,
-    DndModule.forRoot(),
     ImageUploadModule.forRoot()
   ],
   // tslint:disable-next-line:max-line-length

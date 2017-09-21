@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DndModule} from 'ng2-dnd';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { TechnicianRoutingModule } from './technician-routing.module';
@@ -19,7 +18,6 @@ import { TechWorkOrderComponent } from './tech-work-order/tech-work-order.compon
     ChartsModule,
     AngularMultiSelectModule,
     TechnicianRoutingModule,
-    DndModule.forRoot(),
     ImageUploadModule.forRoot()
   ],
   // tslint:disable-next-line:max-line-length

@@ -52,15 +52,54 @@
     <nav class="sidebar-nav">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/dashboard']"><i class="icon-speedometer"></i> Dashboard </a>
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/dashboard']"><i class="fa fa-line-chart"></i> Dashboard </a>
         </li>
          <li class="divider"></li>
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/workorder']"><i class="icon-wrench"></i> Work Order </a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/workrequest']"><i class="fa fa-exclamation-circle"></i> Work Request </a>
-        </li>
+         <!-- <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
+            <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/helpdesk/workorder']"><i class="icon-wrench" ></i> Work Order</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/workorder/open']"><i class="fa fa-angle-right"></i> Open</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/workorder/ongoing']"><i class="fa fa-angle-right"></i> Ongoing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/workorder/closed']"><i class="fa fa-angle-right"></i> Closed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/workorder/quotation']"><i class="fa fa-angle-right"></i> Quotation</a>
+              </li>
+            </ul>
+          </li>          -->
+          <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
+            <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/helpdesk/workrequest']"><i class="fa fa-exclamation-circle" ></i> Work Request</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/newworkrequest']"><i class="fa fa-angle-right"></i> New</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/openworkrequest']"><i class="fa fa-angle-right"></i> Open</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/verifiedworkrequest']"><i class="fa fa-angle-right"></i> Verified</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/cancelledworkrequest']"><i class="fa fa-angle-right"></i> Cancelled</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown >
+            <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle [routerLink]="['/helpdesk/schedule/calendar']" ><i class="fa fa-calendar" ></i> Work Schedule</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/schedule/calendar']"><i class="fa fa-angle-right"></i> Calendar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/helpdesk/schedule/list']"><i class="fa fa-angle-right"></i> List</a>
+              </li>
+            </ul>
+          </li> 
       </ul>
     </nav>
   </div>
