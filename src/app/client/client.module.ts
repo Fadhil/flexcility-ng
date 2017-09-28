@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
     ClientRoutingModule,
     ImageUploadModule.forRoot()
   ],
-  declarations: [ClientServiceRequisitionComponent, ClientServiceRequisitionSummaryComponent, HomeComponent]
+  declarations: [ClientServiceRequisitionComponent, ClientServiceRequisitionSummaryComponent, HomeComponent
+]
 })
 export class ClientModule { }

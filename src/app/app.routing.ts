@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './shared/guard/auth.guard';
@@ -8,6 +9,10 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { EngineerLayoutComponent } from './layouts/engineer-layout/engineer-layout.component';
+import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
+import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.component';
 
 export const routes: Routes = [
   {
@@ -17,7 +22,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: FullLayoutComponent, canActivate: [AuthGuard],
+    component: FullLayoutComponent,
     data: {
       title: 'Home'
     },
@@ -61,6 +66,19 @@ export const routes: Routes = [
       {
         path: 'charts',
         loadChildren: './chartjs/chartjs.module#ChartJSModule'
+      }
+    ] 
+  },
+  {
+    path: 'admin',
+    component: AdminLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './admin/admin.module#AdminModule'
       }
     ]
   },
@@ -130,7 +148,49 @@ export const routes: Routes = [
         loadChildren: './pages/pages.module#PagesModule'
       }
     ]
+  },
+  {
+    path: 'engineer',
+    component: EngineerLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+
+      {
+        path: '',
+        loadChildren: './engineer/engineer.module#EngineerModule'
+      }
+    ]
+  },
+  {
+    path: 'vendor',
+    component: VendorLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+
+      {
+        path: '',
+        loadChildren: './vendor/vendor.module#VendorModule'
+      }
+    ]
+  },
+  {
+    path: 'management',
+    component: ManagerLayoutComponent,
+    data: {
+      title: ''
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './management/management.module#ManagementModule'
+      }
+    ]
   }
+
 ];
 
 @NgModule({

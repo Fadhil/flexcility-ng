@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientServiceRequisitionComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
