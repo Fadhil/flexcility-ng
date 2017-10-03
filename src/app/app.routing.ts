@@ -1,8 +1,8 @@
+import { AdminGuard } from './shared/guard/admin.guard';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './shared/guard/auth.guard';
-
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
@@ -22,7 +22,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: FullLayoutComponent,
+    component: FullLayoutComponent, canActivate: [AuthGuard],
     data: {
       title: 'Home'
     },
@@ -71,7 +71,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminLayoutComponent,
+    component: AdminLayoutComponent,canActivate: [AuthGuard, AdminGuard],
     data: {
       title: ''
     },
@@ -98,7 +98,7 @@ export const routes: Routes = [
   },
   {
     path: 'client',
-    component: ClientLayoutComponent,
+    component: ClientLayoutComponent,canActivate: [AuthGuard],
     data: {
       title: 'Client'
     },
@@ -111,7 +111,7 @@ export const routes: Routes = [
   },
   {
     path: 'tech',
-    component: TechLayoutComponent,
+    component: TechLayoutComponent,canActivate: [AuthGuard],
     data: {
       title: 'Tech'
     },
@@ -124,7 +124,7 @@ export const routes: Routes = [
   },
   {
     path: 'helpdesk',
-    component: HelpdeskLayoutComponent,
+    component: HelpdeskLayoutComponent,canActivate: [AuthGuard],
     data: {
       title: 'Helpdesk'
     },
@@ -151,7 +151,7 @@ export const routes: Routes = [
   },
   {
     path: 'engineer',
-    component: EngineerLayoutComponent,
+    component: EngineerLayoutComponent,canActivate: [AuthGuard],
     data: {
       title: ''
     },
@@ -165,7 +165,7 @@ export const routes: Routes = [
   },
   {
     path: 'vendor',
-    component: VendorLayoutComponent,
+    component: VendorLayoutComponent,canActivate: [AuthGuard],
     data: {
       title: ''
     },
@@ -179,7 +179,7 @@ export const routes: Routes = [
   },
   {
     path: 'management',
-    component: ManagerLayoutComponent,
+    component: ManagerLayoutComponent,canActivate: [AuthGuard],
     data: {
       title: ''
     },
