@@ -30,6 +30,7 @@ import { ClientLayoutComponent } from './layouts/client-layout/client-layout.com
 import { AlertComponent } from './shared/alert/alert.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { AuthGuard } from './shared/guard/auth.guard';
+import { AdminGuard } from './shared/guard/admin.guard';
 import { AlertService, AuthenticationService, UserService } from './shared/services/index';
 import { TechLayoutComponent } from './layouts/tech-layout/tech-layout.component';
 import { HelpdeskLayoutComponent } from './layouts/helpdesk-layout/helpdesk-layout.component';
@@ -82,6 +83,7 @@ import { ManagerLayoutComponent } from './layouts/manager-layout/manager-layout.
     },
     AppConfig,
     AuthGuard,
+    AdminGuard,
     AlertService,
     AuthenticationService,
     UserService, 
