@@ -13,7 +13,9 @@ export class LoginComponent implements OnInit {
   model: any = {};
   loading = false;
   returnUrl: string;
-
+  adminReturnUrl: string;
+  engineerReturnUrl: string;
+  
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -25,7 +27,10 @@ export class LoginComponent implements OnInit {
     this.authenticationService.logout();
 
     // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
+    this.adminReturnUrl = this.route.snapshot.queryParams['returnUrl'] || '/admin/dashboard';
+
+    this.engineerReturnUrl = this.route.snapshot.queryParams['returnUrl'] || '/engineer/dashboard';
+    
   }
 
   login() {
@@ -35,9 +40,11 @@ export class LoginComponent implements OnInit {
         data => {
           var user = JSON.parse(localStorage.getItem('currentUser'));
           if(user.role == 'Admin'){
-            this.router.navigate([this.returnUrl]);
+            this.router.navigate([this.adminReturnUrl]);
+          } else if(user.role == 'Engineer') {
+            this.router.navigate([this.engineerReturnUrl]);
           } else {
-            this.router.navigate(['/pages/welcome']);
+            this.router.navigate(['/accounts/login']);
           }
 
         },
