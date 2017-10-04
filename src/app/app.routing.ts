@@ -21,6 +21,11 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'admin',
+    redirectTo: 'admin/dashboard',
+    pathMatch: 'full',
+  },
+  {
     path: '',
     component: FullLayoutComponent, canActivate: [AuthGuard],
     data: {
