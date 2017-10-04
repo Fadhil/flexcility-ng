@@ -37,10 +37,6 @@ export const routes: Routes = [
         loadChildren: './dashboard/dashboard.module#DashboardModule'
       },
       {
-        path: 'admin',
-        loadChildren: './admin/admin.module#AdminModule'
-      },
-      {
         path: 'helpdesk-dashboard',
         loadChildren: './helpdesk-dashboard/helpdesk-dashboard.module#HelpdeskDashboardModule'
       },
