@@ -28,6 +28,17 @@ export class UserService {
     return this.http.delete(this.config.apiUrl + '/users/' + _id, this.jwt());
   }
 
+  profileByEmail(email: string) {
+    let sessionUser = JSON.parse(sessionStorage.getItem('sessionUser'));
+    if(sessionUser !== null) {
+      return sessionUser;
+    } else {
+      sessionUser = this.http.get(this.config.apiUrl + '/users/' + email, this.jwt())
+      sessionStorage.setItem('sessionUser', sessionUser)
+      return sessionUser;
+    }
+  }
+
   // private helper methods
 
   private jwt() {
