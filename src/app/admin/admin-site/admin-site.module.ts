@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AdminSiteRoutingModule } from './admin-site-routing.module';
 import { ImageUploadModule } from 'angular2-image-upload';
@@ -17,6 +17,8 @@ import { AdminSiteEditComponent } from './admin-site-edit/admin-site-edit.compon
     CommonModule,
     ModalModule.forRoot(),
     AdminSiteRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     ImageUploadModule.forRoot()
   ],
   declarations: [ AdminSiteNewComponent, AdminSiteHomeComponent, AdminSiteViewComponent, AdminSiteEditComponent]
