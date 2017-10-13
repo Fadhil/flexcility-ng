@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AdminRoutingModule } from './admin-routing.module';
-import { ImageUploadModule } from 'angular2-image-upload';
 import { AdminOrganizationComponent } from './admin-organization/admin-organization.component';
 import { AdminSiteComponent } from './admin-site/admin-site.component';
 import { AdminAssetComponent } from './admin-asset/admin-asset.component';
@@ -28,8 +27,7 @@ import { AdminWorkScheduleComponent } from './admin-work-schedule/admin-work-sch
     ReactiveFormsModule,
     ChartsModule,
     AngularMultiSelectModule,
-    AdminRoutingModule,
-    ImageUploadModule.forRoot()
+    AdminRoutingModule
   ],
   // tslint:disable-next-line:max-line-length
   declarations: [AdminOrganizationComponent, AdminSiteComponent, AdminAssetComponent, AdminUserComponent, AdminTeamComponent, AdminWorkRequestComponent, AdminWorkOrderComponent, AdminDashboardComponent, AdminBuildingComponent, AdminAreaComponent, AdminDashboardWoWrComponent, AdminWorkScheduleComponent ]
