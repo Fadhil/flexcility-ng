@@ -1,5 +1,5 @@
 <div class="col-sm-8">
-  <form [formGroup]="siteForm" novalidate>
+  <form [formGroup]="siteForm" (ngSubmit)="onSubmit()" novalidate>
   <div class="card">
     <div class="card-header">
       <strong>Register New Site</strong>
@@ -8,8 +8,11 @@
       <div class="card-block">
         <div class="form-group row">
           <div class="col-md-8">
-				    <image-upload></image-upload>
-          </div>
+            <image-upload (uploadFinished)="onUploadFinished($event)"
+              (uploadStateChanged)="onUploadStateChanged($event)">
+            </image-upload>
+            <!-- <input #fileupload [(ngModel)]="myFile" name="myFile" type="file" (change)="fileChange(fileupload.files)"/> -->
+				  </div>
         </div>
         <div class="row">
           <div class="col-sm-8">
@@ -30,12 +33,15 @@
         </div><!--/.row-->
       </div>
       <div class="card-footer">
-        <button type="submit" class="btn btn-sm btn-primary pull-right">Submit</button>
+        <button type="submit" class="btn btn-sm btn-primary pull-right"
+        [disabled]="siteForm.pristine">Submit</button>
         
       </div>
       
   </div>
 </form>
 </div>
-<p>Form value: {{ siteForm.get('address').value | json }}</p>
+<p>Form value: {{ siteForm.value | json }}</p>
 <p>Form status: {{ siteForm.status | json }}</p>
+<h4>Name change log</h4>
+<div *ngFor="let name of nameChangeLog">{{name}}</div>
